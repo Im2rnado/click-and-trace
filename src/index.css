@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+@theme {
+    --font-sans: "Helvetica Now", Helvetica, Arial, sans-serif;
+    --font-display: "29LT Makina", Georgia, serif;
+
+    --color-egypt-terra: #914a38;
+    --color-egypt-gold: #f4d070;
+}
+
+@layer base {
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        @apply antialiased overflow-x-hidden bg-stone-50 text-stone-900;
+    }
+}
