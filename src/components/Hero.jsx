@@ -21,7 +21,7 @@ const Hero = () => {
                     className="mb-8 relative"
                 >
                     <img
-                        src="/logo.png"
+                        src={`${import.meta.env.BASE_URL}logo.png`}
                         alt="Click & Trace Logo"
                         className="h-20 md:h-32 mx-auto object-contain relative z-10"
                         style={{
