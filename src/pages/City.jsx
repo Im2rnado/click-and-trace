@@ -62,7 +62,7 @@ const City = () => {
 
             <main className="max-w-4xl mx-auto px-4 md:px-6 py-12 md:py-16">
                 <div className="mb-8 md:mb-12 border-l-4 border-egypt-terra pl-4 md:pl-6">
-                    <h2 className="text-xl md:text-3xl font-serif italic text-stone-600">{city.descriptionShort}</h2>
+                    <h2 className="text-xl md:text-3xl font-display italic text-stone-600">{city.descriptionShort}</h2>
                 </div>
 
                 <article className="prose prose-lg prose-stone max-w-none mb-12 md:mb-16">

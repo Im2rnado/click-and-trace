@@ -58,7 +58,7 @@ const MapExperience = ({ activeCityIndex }) => {
                     // Add terrain source
                     map.current.addSource('mapbox-dem', {
                         'type': 'raster-dem',
-                        'url': 'mapbox://mapbox.mapbox-terrain-dem-v1',
+                        'url': 'mapbox://mapbox.mapbox-light-v11',
                         'tileSize': 512,
                         'maxzoom': 14
                     });

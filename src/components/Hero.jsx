@@ -14,6 +14,22 @@ const Hero = () => {
             </div>
 
             <div className="z-10 px-4 max-w-4xl mx-auto w-full">
+                <motion.div
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.8, ease: "easeOut" }}
+                    className="mb-8 relative"
+                >
+                    <img
+                        src="/logo.png"
+                        alt="Click & Trace Logo"
+                        className="h-20 md:h-32 mx-auto object-contain relative z-10"
+                        style={{
+                            filter: 'drop-shadow(0 4px 12px rgba(0,0,0,0.9)) drop-shadow(0 0 24px rgba(0,0,0,0.6))',
+                            WebkitFilter: 'drop-shadow(0 4px 12px rgba(0,0,0,0.9)) drop-shadow(0 0 24px rgba(0,0,0,0.6))'
+                        }}
+                    />
+                </motion.div>
                 <motion.h1
                     initial={{ opacity: 0, y: 50 }}
                     animate={{ opacity: 1, y: 0 }}

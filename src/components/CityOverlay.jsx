@@ -20,7 +20,7 @@ const CityOverlay = ({ city }) => {
                     <span className="text-xl md:text-2xl text-egypt-terra font-serif ml-2 md:ml-0">{city.nameHieroglyph}</span>
                 </div>
 
-                <h3 className="text-base md:text-lg font-serif italic text-stone-600 dark:text-stone-400 mb-3 md:mb-4">{city.descriptionShort}</h3>
+                <h3 className="text-base md:text-lg font-display italic text-stone-600 dark:text-stone-400 mb-3 md:mb-4">{city.descriptionShort}</h3>
 
                 <p className="text-stone-700 dark:text-stone-300 leading-relaxed mb-4 md:mb-6 font-sans text-sm line-clamp-3 md:line-clamp-4">
                     {city.descriptionLong}
