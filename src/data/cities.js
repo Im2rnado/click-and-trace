@@ -5,7 +5,7 @@ export const cities = [
         id: 'heliopolis',
         nameEn: 'Heliopolis',
         descriptionShort: 'The Ancient City of the Sun',
-        descriptionLong: 'Once the ultimate hotspot of ancient Egypt, Heliopolis — the legendary “City of the Sun” — was where the worship of Ra shaped an entire civilization. Hidden today beneath the busy streets of Ain Shams and Al-Matareya, this ancient city was more than a religious center; it was a hub for science, philosophy, and some of Egypt’s earliest breakthroughs, including the solar calendar. Even now, the towering Obelisk of Senusret I and newly discovered statues of Ramses II keep revealing stories from a city that once lit up the ancient world."',
+        descriptionLong: 'Once the ultimate hotspoOnce the ultimate hotspot of ancient Egypt, Heliopolis — the legendary “City of the Sun” — was where the worship of Ra shaped an entire civilization. Hidden today beneath the busy streets of Ain Shams and Al-Matareya, this ancient city was more than a religious center; it was a hub for science, philosophy, and some of Egypt’s earliest breakthroughs, including the solar calendar. Even now, the towering Obelisk of Senusret I and newly discovered statues of Ramses II keep revealing stories from a city that once lit up the ancient world."',
         image: `${baseUrl}Heliopolis/UGLIANO_Fig.3.jpg`,
         lat: 30.1296,
         lng: 31.3275,
