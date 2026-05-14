@@ -3,6 +3,7 @@ import { useParams, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { cities } from '../data/cities';
 import Footer from '../components/Footer';
+import Header from '../components/Header';
 
 const City = () => {
     const { id } = useParams();
@@ -23,39 +24,34 @@ const City = () => {
 
     return (
         <div className="min-h-screen bg-stone-50 text-stone-900 font-sans">
+            <Header />
             {/* Header / Hero for City */}
             <header className="relative h-[60vh] bg-stone-900 flex items-center justify-center overflow-hidden">
-                {/* Placeholder Texture/Image */}
-                <div className="absolute inset-0 opacity-40">
+                <div className="absolute inset-0 z-0 bg-stone-900 flex justify-center items-center">
                     <img
-                        src={`https://images.unsplash.com/photo-1548625361-8889aa360a26?q=80&w=2070&auto=format&fit=crop`} // Using a reliable Egypt texture
+                        src={city.image}
                         alt={city.nameEn}
-                        className="w-full h-full object-cover grayscale"
-                        onError={(e) => e.target.style.display = 'none'} // Fallback if unsplash fails
+                        className="w-full h-full object-contain"
+                        onError={(e) => {
+                            e.target.src = 'https://images.unsplash.com/photo-1548625361-8889aa360a26?q=80&w=2070&auto=format&fit=crop';
+                        }}
                     />
-                    <div className="absolute inset-0 bg-stone-900/50"></div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-stone-900 via-stone-900/40 to-stone-900/60"></div>
                 </div>
 
-                <div className="z-10 text-center text-white p-4 w-full px-4">
+                <div className="z-10 text-center text-white p-4 w-full px-4 mt-16">
                     <motion.h1
                         initial={{ y: 30, opacity: 0 }}
                         animate={{ y: 0, opacity: 1 }}
                         transition={{ duration: 0.8 }}
                         className="text-5xl md:text-8xl font-display mb-2 tracking-tighter"
+                        style={{ textShadow: '0 4px 12px rgba(0,0,0,0.5)' }}
                     >
                         {city.nameEn}
                     </motion.h1>
-                    <motion.div
-                        initial={{ scale: 0.9, opacity: 0 }}
-                        animate={{ scale: 1, opacity: 1 }}
-                        transition={{ delay: 0.3, duration: 0.8 }}
-                        className="text-4xl md:text-5xl text-egypt-terra font-serif mt-4"
-                    >
-                        {city.nameHieroglyph}
-                    </motion.div>
                 </div>
 
-                <Link to="/" className="absolute top-6 left-6 md:top-8 md:left-8 text-white/90 hover:text-white transition-colors flex items-center gap-2 group bg-stone-900/50 p-2 rounded-full md:bg-transparent md:p-0">
+                <Link to="/" className="absolute top-24 left-6 md:top-24 md:left-8 text-white/90 hover:text-white transition-colors flex items-center gap-2 group bg-stone-900/50 p-2 rounded-full md:bg-transparent md:p-0 z-20">
                     <span className="group-hover:-translate-x-1 transition-transform">&larr;</span> <span className="hidden md:inline">Back to Map</span>
                 </Link>
             </header>

@@ -14,7 +14,7 @@ const MapExperience = ({ activeCityIndex }) => {
     const markersRef = useRef([]);
     const isInView = useInView(mapContainer, { amount: 0.3, once: true });
 
-    const token = "pk.eyJ1IjoieWFzc2luYmVkaWVyIiwiYSI6ImNta2JiYTVyNTAxejMzY3NncDhibHNpdHEifQ.3XZxlObk3f2lHdd2x6Yv6A";
+    const token = import.meta.env.VITE_MAPBOX_TOKEN;
 
     useEffect(() => {
         if (map.current) return;
@@ -32,8 +32,8 @@ const MapExperience = ({ activeCityIndex }) => {
             map.current = new mapboxgl.Map({
                 container: mapContainer.current,
                 style: style,
-                center: [25, 27], // Zoomed out view of North Africa
-                zoom: 2, // Low zoom for "Earth from space" feel
+                center: [30.8, 26.8], // Centered on Egypt
+                zoom: 4.8, // Zoomed out view
                 pitch: 0,
                 projection: 'globe',
                 interactive: false, // Disable native interaction
@@ -44,7 +44,7 @@ const MapExperience = ({ activeCityIndex }) => {
                         showPointOfInterestLabels: false,
                         showPlaceLabels: true,
                         showTransitLabels: false,
-                        showAdminBoundaries: false,
+                        showAdminBoundaries: true,
                         showPedestrianRoads: false,
                         showRoadLabels: false,
                         showRoadsAndTransit: false
@@ -123,8 +123,8 @@ const MapExperience = ({ activeCityIndex }) => {
         } else {
             // Reset view if index is -1 (overview)
             map.current.flyTo({
-                center: [31.2357, 28.0444],
-                zoom: 5,
+                center: [30.8, 26.8],
+                zoom: 4.8,
                 pitch: 0,
                 bearing: 0,
                 speed: 0.8

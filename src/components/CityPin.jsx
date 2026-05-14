@@ -1,27 +1,39 @@
 import React from 'react';
 
 // This component is intended to be rendered into a DOM node for Mapbox markers
-const CityPin = ({ isActive, isDay, onClick, cityName }) => {
-    // isDay = true -> red (#ef4444), false -> silver (#C0C0C0)
-    const baseColor = isDay ? 'bg-[#ef4444]' : 'bg-[#C0C0C0]';
-    const glowColor = isDay ? 'bg-[#ef4444]/80' : 'bg-[#C0C0C0]/80';
-
+const CityPin = ({ isActive, onClick, cityName }) => {
     return (
         <div
             onClick={onClick}
-            className={`group relative w-6 h-6 flex items-center justify-center cursor-pointer transition-all duration-500 ${isActive ? 'scale-150 z-50' : 'hover:scale-125 z-10'}`}
-            style={{ transformOrigin: 'center bottom' }}
+            className={`relative flex flex-col items-center justify-center cursor-pointer transition-all duration-500 z-10`}
+            style={{ width: '48px', height: '48px' }}
         >
-            {/* City Name Tooltip */}
-            <div className="absolute -top-8 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none whitespace-nowrap bg-stone-900/80 text-white text-xs px-2 py-1 rounded">
+            {/* City Name permanently visible below */}
+            <div className="absolute top-10 whitespace-nowrap text-stone-900 font-bold text-sm drop-shadow-md pointer-events-none">
                 {cityName}
             </div>
 
-            {/* Pulse Effect */}
-            <span className={`absolute inline-flex h-full w-full rounded-full opacity-75 animate-ping ${glowColor}`}></span>
+            {/* Pulse glow ring when active */}
+            {isActive && (
+                <span className="absolute inset-0 rounded-full animate-ping"
+                    style={{ background: 'rgba(145, 74, 56, 0.4)' }}
+                />
+            )}
 
-            {/* Core Pin */}
-            <span className={`relative inline-flex rounded-full h-4 w-4 border-2 border-white shadow-md ${baseColor}`}></span>
+            {/* Logo pin */}
+            <img
+                src={`${import.meta.env.BASE_URL}bin_logo.png`}
+                alt={cityName}
+                style={{
+                    width: '36px',
+                    height: '36px',
+                    objectFit: 'contain',
+                    filter: isActive
+                        ? 'drop-shadow(0 0 6px rgba(145,74,56,0.9)) drop-shadow(0 2px 4px rgba(0,0,0,0.6))'
+                        : 'drop-shadow(0 2px 4px rgba(0,0,0,0.5))',
+                    transition: 'all 0.4s ease',
+                }}
+            />
         </div>
     );
 };

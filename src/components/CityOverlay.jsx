@@ -15,9 +15,18 @@ const CityOverlay = ({ city }) => {
                 transition={{ duration: 0.5 }}
                 className="absolute bottom-4 left-4 right-4 md:top-1/4 md:right-20 md:left-auto md:bottom-auto bg-white/95 dark:bg-stone-900/95 backdrop-blur-md p-6 rounded-lg shadow-2xl md:max-w-sm border-l-4 border-egypt-terra z-10 max-h-[45vh] md:max-h-none overflow-y-auto md:overflow-visible"
             >
+                {city.image && (
+                    <div className="mb-4 w-full h-40 overflow-hidden rounded-md shadow-inner">
+                        <img 
+                            src={city.image} 
+                            alt={city.nameEn} 
+                            className="w-full h-full object-cover transition-transform duration-700 hover:scale-110"
+                        />
+                    </div>
+                )}
+                
                 <div className="mb-2 flex items-baseline justify-between md:block">
                     <h2 className="text-3xl md:text-4xl font-display text-stone-800 dark:text-stone-100">{city.nameEn}</h2>
-                    <span className="text-xl md:text-2xl text-egypt-terra font-serif ml-2 md:ml-0">{city.nameHieroglyph}</span>
                 </div>
 
                 <h3 className="text-base md:text-lg font-display italic text-stone-600 dark:text-stone-400 mb-3 md:mb-4">{city.descriptionShort}</h3>
@@ -26,12 +35,23 @@ const CityOverlay = ({ city }) => {
                     {city.descriptionLong}
                 </p>
 
-                <Link
-                    to={`/city/${city.id}`}
-                    className="inline-block w-full md:w-auto text-center px-6 py-3 md:py-2 bg-stone-800 text-white text-sm uppercase tracking-wider hover:bg-egypt-terra transition-colors duration-300 rounded-md md:rounded-none"
-                >
-                    View More
-                </Link>
+                <div className="flex items-center justify-between gap-4">
+                    <Link
+                        to={`/city/${city.id}`}
+                        className="inline-block flex-1 md:flex-none text-center px-6 py-3 md:py-2 bg-stone-800 text-white text-sm uppercase tracking-wider hover:bg-egypt-terra transition-colors duration-300 rounded-md md:rounded-none"
+                    >
+                        View More
+                    </Link>
+                    <a
+                        href={`https://www.google.com/maps/search/?api=1&query=${city.lat},${city.lng}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="p-2.5 bg-stone-200 dark:bg-stone-800 rounded-full text-stone-800 dark:text-stone-200 hover:bg-egypt-terra hover:text-white dark:hover:bg-egypt-terra transition-colors shadow-sm"
+                        title="View on Google Maps"
+                    >
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                    </a>
+                </div>
             </motion.div>
         </AnimatePresence>
     );
