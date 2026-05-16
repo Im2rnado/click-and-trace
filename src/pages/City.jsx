@@ -31,7 +31,7 @@ const City = () => {
                     <img
                         src={city.image}
                         alt={city.nameEn}
-                        className="w-full h-full object-contain"
+                        className="w-full h-full object-cover"
                         onError={(e) => {
                             e.target.src = 'https://images.unsplash.com/photo-1548625361-8889aa360a26?q=80&w=2070&auto=format&fit=crop';
                         }}
