@@ -62,35 +62,9 @@ const City = () => {
                 </div>
 
                 <article className="prose prose-lg prose-stone max-w-none mb-12 md:mb-16">
-                    <p className="text-lg md:text-xl leading-relaxed mb-6 font-light">{city.descriptionLong}</p>
-
-                    <p>
-                        The history of {city.nameEn} stretches back thousands of years. As one explores its ruins and records,
-                        a picture emerges of a vibrant center of culture, religion, and daily life in Ancient Egypt.
-                        Archaeological excavations have revealed temples, housing districts, and artifacts that tell the story
-                        of its rise and eventual decline.
-                    </p>
-                    <p>
-                        Today, it stands as a testament to the architectural and administrative prowess of the Pharaonic era,
-                        inviting scholars and visitors alike to piece together the fragments of its past.
-                    </p>
+                    <p className="text-lg md:text-xl leading-relaxed mb-6 font-light text-justify" style={{ wordSpacing: '-0.05em' }}>{city.descriptionLong}</p>
                 </article>
 
-                {/* Video Section */}
-                <section className="mb-16">
-                    <h3 className="text-2xl font-display mb-6 border-b border-stone-200 pb-2">Multimedia Journey</h3>
-                    <div className="aspect-video bg-stone-200 rounded-lg overflow-hidden shadow-lg">
-                        <iframe
-                            width="100%"
-                            height="100%"
-                            src={city.videoUrl}
-                            title={`${city.nameEn} Video`}
-                            frameBorder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowFullScreen
-                        ></iframe>
-                    </div>
-                </section>
 
                 {/* External Links */}
                 {city.externalLinks && city.externalLinks.length > 0 && (
