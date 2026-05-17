@@ -33,7 +33,7 @@ const MapExperience = ({ activeCityIndex }) => {
                 container: mapContainer.current,
                 style: style,
                 center: [30.8, 26.8], // Centered on Egypt
-                zoom: 4.8, // Zoomed out view
+                zoom: 3.5, // ⬅️ Start more zoomed out
                 pitch: 0,
                 projection: 'globe',
                 interactive: false, // Disable native interaction
@@ -65,16 +65,6 @@ const MapExperience = ({ activeCityIndex }) => {
                     // add the DEM source as a terrain layer with exaggerated height
                     map.current.setTerrain({ 'source': 'mapbox-dem', 'exaggeration': 1.5 });
                 }
-
-                // Set atmosphere
-                // map.current.setFog({
-                //     'range': [-1, 2],
-                //     'horizon-blend': 0.1,
-                //     'color': mode === 'day' ? '#e6dac3' : '#242b4b', // Bone/Sand vs Dark Blue
-                //     'high-color': mode === 'day' ? '#fdf6e3' : '#0f172a', // Light sand vs Darker Blue
-                //     'space-color': mode === 'day' ? '#d1e6fa' : '#020617',
-                //     'star-intensity': mode === 'day' ? 0.0 : 0.6
-                // });
             });
 
             // Initialize Markers
@@ -82,7 +72,7 @@ const MapExperience = ({ activeCityIndex }) => {
                 const el = document.createElement('div');
                 // Create a root for each marker to render React component
                 const root = createRoot(el);
-                root.render(<CityPin isActive={index === activeCityIndex} isDay={true} cityName={city.nameEn} />);
+                root.render(<CityPin isActive={false} showName={false} cityName={city.nameEn} />);
 
                 const marker = new mapboxgl.Marker({
                     element: el,
@@ -113,7 +103,7 @@ const MapExperience = ({ activeCityIndex }) => {
         if (targetCity) {
             map.current.flyTo({
                 center: [targetCity.lng, targetCity.lat],
-                zoom: 11,
+                zoom: 9.9, // ⬅️ 10% more zoomed out (was 11)
                 pitch: 60,
                 bearing: 0, // Reset bearing to 0 (North up / looking forward) instead of 20
                 speed: 0.4, // Slower for a more majestic flight
@@ -124,7 +114,7 @@ const MapExperience = ({ activeCityIndex }) => {
             // Reset view if index is -1 (overview)
             map.current.flyTo({
                 center: [30.8, 26.8],
-                zoom: 4.8,
+                zoom: 3.5, // ⬅️ Match initial zoomed out state
                 pitch: 0,
                 bearing: 0,
                 speed: 0.8
@@ -132,17 +122,16 @@ const MapExperience = ({ activeCityIndex }) => {
         }
 
         // Update Markers State
-        const { pinColor } = getTimeMode(); // Re-fetch in case mode changed (though we force day=true currently)
-        const isDay = true;
-
         markersRef.current.forEach((item, index) => {
             const city = cities[index];
-            if (!city) return; // Guard against undefined city
+            if (!city) return;
+
+            const isActive = index === activeCityIndex;
 
             item.root.render(
                 <CityPin
-                    isActive={index === activeCityIndex}
-                    isDay={isDay}
+                    isActive={isActive}
+                    showName={isActive} // Only show name for active pin
                     cityName={city.nameEn}
                 />
             );

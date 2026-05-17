@@ -1,18 +1,13 @@
 import React from 'react';
 
 // This component is intended to be rendered into a DOM node for Mapbox markers
-const CityPin = ({ isActive, onClick, cityName }) => {
+const CityPin = ({ isActive, onClick, cityName, showName }) => {
     return (
         <div
             onClick={onClick}
             className={`relative flex flex-col items-center justify-center cursor-pointer transition-all duration-500 z-10`}
-            style={{ width: '48px', height: '48px' }}
+            style={{ width: '48px', height: '48px', overflow: 'visible' }}
         >
-            {/* City Name permanently visible below */}
-            <div className="absolute top-10 whitespace-nowrap text-stone-900 font-bold text-sm drop-shadow-md pointer-events-none">
-                {cityName}
-            </div>
-
             {/* Pulse glow ring when active */}
             {isActive && (
                 <span className="absolute inset-0 rounded-full animate-ping"
@@ -34,6 +29,13 @@ const CityPin = ({ isActive, onClick, cityName }) => {
                     transition: 'all 0.4s ease',
                 }}
             />
+
+            {/* City Name — only visible on the active city */}
+            {showName && (
+                <div className="absolute top-full whitespace-nowrap text-stone-900 font-bold text-base drop-shadow-[0_0_8px_rgba(255,255,255,1)] pointer-events-none z-20 bg-white/50 px-2 py-0.5 rounded-md backdrop-blur-sm mt-1 border border-stone-200">
+                    {cityName}
+                </div>
+            )}
         </div>
     );
 };
