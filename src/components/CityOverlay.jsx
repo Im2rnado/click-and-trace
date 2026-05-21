@@ -15,7 +15,7 @@ const CityOverlay = ({ city }) => {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: 40 }}
                 transition={{ duration: 0.35 }}
-                className="md:hidden absolute bottom-4 left-4 right-4 z-10"
+                className="pointer-events-auto md:hidden absolute bottom-4 left-4 right-4 z-10"
             >
                 <div className="bg-stone-900/95 backdrop-blur-md rounded-2xl shadow-2xl overflow-hidden border-l-4 border-egypt-terra flex items-center gap-3 p-3">
                     {city.image && (
@@ -54,7 +54,7 @@ const CityOverlay = ({ city }) => {
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: 50 }}
                 transition={{ duration: 0.5 }}
-                className="hidden md:block absolute top-1/4 right-20 bg-white/95 dark:bg-stone-900/95 backdrop-blur-md p-6 rounded-lg shadow-2xl max-w-sm border-l-4 border-egypt-terra z-10"
+                className="pointer-events-auto hidden md:block absolute top-1/4 right-20 bg-white/95 dark:bg-stone-900/95 backdrop-blur-md p-6 rounded-lg shadow-2xl max-w-sm border-l-4 border-egypt-terra z-10"
             >
                 {city.image && (
                     <div className="mb-4 w-full h-40 overflow-hidden rounded-md shadow-inner">

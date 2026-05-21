@@ -11,6 +11,7 @@ const City = () => {
 
     useEffect(() => {
         window.scrollTo(0, 0);
+        sessionStorage.setItem('comingFromCityPage', 'true');
     }, [id]);
 
     if (!city) {
@@ -51,7 +52,11 @@ const City = () => {
                     </motion.h1>
                 </div>
 
-                <Link to="/" className="absolute top-24 left-6 md:top-24 md:left-8 text-white/90 hover:text-white transition-colors flex items-center gap-2 group bg-stone-900/50 p-2 rounded-full md:bg-transparent md:p-0 z-20">
+                <Link 
+                    to="/" 
+                    state={{ activeCityIndex: cities.findIndex(c => c.id === city.id) }}
+                    className="absolute top-24 left-6 md:top-24 md:left-8 text-white/90 hover:text-white transition-colors flex items-center gap-2 group bg-stone-900/50 p-2 rounded-full md:bg-transparent md:p-0 z-20"
+                >
                     <span className="group-hover:-translate-x-1 transition-transform">&larr;</span> <span className="hidden md:inline">Back to Map</span>
                 </Link>
             </header>
@@ -65,6 +70,31 @@ const City = () => {
                     <p className="text-lg md:text-xl leading-relaxed mb-6 font-light text-justify" style={{ wordSpacing: '-0.05em' }}>{city.descriptionLong}</p>
                 </article>
 
+                {/* Featured Discoveries (Topics) Section */}
+                {city.topics && city.topics.length > 0 && (
+                    <section className="mb-12 md:mb-16">
+                        <h3 className="text-2xl font-display mb-6 border-b border-stone-200 pb-2">Featured Discoveries</h3>
+                        <div className="grid grid-cols-1 gap-6">
+                            {city.topics.map((topic) => (
+                                <Link
+                                    key={topic.id}
+                                    to={`/city/${city.id}/topic/${topic.id}`}
+                                    className="block group bg-stone-100 hover:bg-stone-200/50 p-6 rounded-2xl border border-stone-200 transition-all duration-300 shadow-sm hover:shadow-md"
+                                >
+                                    <div className="flex flex-col gap-3">
+                                        <h4 className="text-xl font-display text-stone-900 group-hover:text-egypt-terra transition-colors leading-tight flex items-center gap-2">
+                                            {topic.title}
+                                            <span className="inline-block transition-transform group-hover:translate-x-1 duration-300 text-sm">→</span>
+                                        </h4>
+                                        <p className="text-stone-600 font-light leading-relaxed text-sm text-justify">
+                                            {topic.description}
+                                        </p>
+                                    </div>
+                                </Link>
+                            ))}
+                        </div>
+                    </section>
+                )}
 
                 {/* External Links */}
                 {city.externalLinks && city.externalLinks.length > 0 && (

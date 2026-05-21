@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import mapboxgl from 'mapbox-gl';
 import { createRoot } from 'react-dom/client';
 import { useInView } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
 import { cities } from '../data/cities';
 import { getTimeMode } from '../utils/timeMode';
 import CityPin from './CityPin';
@@ -9,6 +10,7 @@ import CityPin from './CityPin';
 // Note: Ensure mapbox-gl css is included in index.html
 
 const MapExperience = ({ activeCityIndex }) => {
+    const navigate = useNavigate();
     const mapContainer = useRef(null);
     const map = useRef(null);
     const markersRef = useRef([]);
@@ -72,7 +74,14 @@ const MapExperience = ({ activeCityIndex }) => {
                 const el = document.createElement('div');
                 // Create a root for each marker to render React component
                 const root = createRoot(el);
-                root.render(<CityPin isActive={false} showName={false} cityName={city.nameEn} />);
+                root.render(
+                    <CityPin 
+                        isActive={false} 
+                        showName={false} 
+                        cityName={city.nameEn} 
+                        onClick={() => navigate(`/city/${city.id}`)}
+                    />
+                );
 
                 const marker = new mapboxgl.Marker({
                     element: el,
@@ -133,6 +142,7 @@ const MapExperience = ({ activeCityIndex }) => {
                     isActive={isActive}
                     showName={isActive} // Only show name for active pin
                     cityName={city.nameEn}
+                    onClick={() => navigate(`/city/${city.id}`)}
                 />
             );
         });
