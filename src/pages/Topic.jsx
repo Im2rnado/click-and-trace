@@ -37,7 +37,7 @@ const SlideshowSection = ({ images }) => {
                         animate={{ opacity: 1, x: 0 }}
                         exit={{ opacity: 0, x: -30 }}
                         transition={{ duration: 0.35 }}
-                        className="w-full h-full object-cover"
+                        className="w-full h-full object-contain bg-stone-950"
                         onError={(e) => {
                             e.target.src = 'https://images.unsplash.com/photo-1548625361-8889aa360a26?q=80&w=2070&auto=format&fit=crop';
                         }}
