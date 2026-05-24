@@ -15,7 +15,6 @@ export const cities = [
             {
                 id: 'heliopolis-obelisk',
                 title: 'Heliopolis Obelisk: The Last Standing Monument of an Ancient City (Infographic)',
-                description: 'Rising in the heart of ancient Heliopolis, the obelisk of Senusret I remains the oldest surviving obelisk still standing in its original location in Egypt. Once part of one of ancient Egypt’s most important religious centers, the monument reflects the architectural skill and spiritual significance of the City of the Sun. This infographic highlights the history, importance, and enduring legacy of the Heliopolis Obelisk.',
                 image: `${baseUrl}Heliopolis/hnfographImage Apr 23, 2026, 05_31_19 PM.png`,
                 sections: [
                     {
@@ -33,7 +32,6 @@ export const cities = [
             {
                 id: 'heliopolis-hidden-city',
                 title: 'Heliopolis: The Ancient City Hidden Beneath Cairo',
-                description: 'Every day, thousands of people walk through the streets of El-Matariya without realizing that beneath the crowded roads lies one of ancient Egypt’s most important religious cities...',
                 image: `${baseUrl}Heliopolis/hel_2_1.jpg`,
                 sections: [
                     {
@@ -97,7 +95,6 @@ export const cities = [
             {
                 id: 'heliopolis-through-time',
                 title: 'From the City of the Sun to Modern Cairo: Heliopolis Through Time (Infographic)',
-                description: 'Once one of ancient Egypt’s most important religious centers, Heliopolis was known as the “City of the Sun” and served as a major center for the worship of Ra. Today, most of the ancient city lies hidden beneath the crowded streets of El-Matariya in Cairo. This infographic compares Heliopolis in the past and present, highlighting how a city once filled with temples and monuments gradually transformed into a modern urban district while preserving traces of its ancient legacy underground.',
                 image: `${baseUrl}Heliopolis/UGLIANO_Fig.3.jpg`, // You can swap this image for the infographic file once uploaded
                 sections: [
                     {
@@ -128,7 +125,6 @@ export const cities = [
             {
                 id: 'memphis-saving-capital',
                 title: 'Saving the First Capital: Will Water and Concrete Swallow the History of Memphis?',
-                description: 'In the heart of Mit Rahina, history faces an existential struggle. Data reveals that 70% of the site’s monuments are missing or threatened by chemical erosion, placing us in a race against time to save this world heritage.',
                 image: `${baseUrl}Memphis/mem_1_1.png`,
                 sections: [
                     {
@@ -169,7 +165,6 @@ export const cities = [
             {
                 id: 'memphis-ramesses-descendants',
                 title: "Ramesses' Descendants in Mit Rahina: Modern Tools Chasing an Ancient Miracle",
-                description: 'In the alleys of Mit Rahina, where the colossal statue of Ramesses II stands as a testament to the mastery of Ancient Egyptian sculpture, the dust of stone still coats the faces of his descendants. However, behind this dust lies a technical tale far different from what tourists imagine...',
                 image: `${baseUrl}Memphis/mem_2_1.jpg`,
                 sections: [
                     {
@@ -229,7 +224,6 @@ export const cities = [
             {
                 id: 'memphis-life-ruins',
                 title: 'Life Among Ruins: Everyday Stories Beside Egypt’s First Capital',
-                description: 'In Mit Rahina, the site of ancient Memphis, the first capital of Egypt, history is not confined to museum halls or dusty textbooks. Here, families live in the shadow of colossal statues and weathered temples, their daily routines unfolding against a backdrop of millennia-old monuments...',
                 image: `${baseUrl}Memphis/Copy of IMG_٢٠٢٦٠٤٢٥_١٨٠٠٢١.jpg`,
                 sections: [
                     {
@@ -245,7 +239,6 @@ export const cities = [
             {
                 id: 'memphis-guardian-capital',
                 title: 'The Guardian of the First Egyptian Capital',
-                description: 'Here is Mit Rahina the heart of ancient Memphis, the first capital of unified Egypt, a place that still pulsates with the greatness of our ancestors...',
                 image: `${baseUrl}Memphis/mem_4_1.jpg`,
                 sections: [
                     {
@@ -303,7 +296,6 @@ export const cities = [
             {
                 id: 'memphis-visiting-today',
                 title: 'Visiting Memphis Today',
-                description: 'Mit Rahina is located in the Al-Badrasheen district of Giza, and reaching it is both easy and scenic. Here is your ultimate guide containing transport details, top attractions, best visiting times, and ticket prices.',
                 image: `${baseUrl}Memphis/mem_5_1.jpg`,
                 sections: [
                     {
@@ -391,7 +383,6 @@ export const cities = [
             {
                 id: 'memphis-museum-journey',
                 title: 'Mit Rahina Museum: A Photo Journey Through Egypt’s Ancient Capital',
-                description: 'Located in the ancient city of Memphis, Mit Rahina Museum preserves some of the most remarkable remains of one of Egypt’s earliest capitals. Through statues, stone fragments, and open-air monuments, the museum offers visitors a closer look...',
                 image: `${baseUrl}Memphis/mem_4_1.jpg`,
                 sections: [
                     {
@@ -469,7 +460,6 @@ export const cities = [
             {
                 id: 'tanis-museum-journey',
                 title: 'Inside the Tanis Museum: A Visual Journey Through a Lost Royal City',
-                description: 'This photo story explores the rich history of Tanis through a collection of archival excavation photographs, historic images of San El-Hagar, and portraits of ancient Egyptian kings connected to the site.',
                 image: `${baseUrl}Tanis/ten_1_1 (1).jpg`,
                 sections: [
                     {
@@ -522,7 +512,6 @@ export const cities = [
             {
                 id: 'tanis-five-facts',
                 title: 'Tanis Uncovered: Five Facts About One of Ancient Egypt’s Greatest Cities (Infographic)',
-                description: 'Once a powerful royal capital in Egypt’s northeastern Delta, Tanis—known today as San El-Hagar—was home to temples, royal tombs, and monumental statues that reflected the city’s political and religious importance.',
                 image: `${baseUrl}Tanis/ten_2_1.jpg`,
                 sections: [
                     {
@@ -540,7 +529,6 @@ export const cities = [
             {
                 id: 'tanis-forgotten-city',
                 title: 'Tanis: The Forgotten Royal City Beneath Sharqia’s Fields',
-                description: 'Hidden among the fields of Sharqia Governorate, the ancient city of Tanis—known today as San El-Hagar—once stood as one of Egypt’s most important royal capitals.',
                 image: `${baseUrl}Tanis/ten_3_1.jpg`,
                 sections: [
                     {
@@ -622,7 +610,6 @@ export const cities = [
             {
                 id: 'tanis-through-time',
                 title: 'Tanis Through Time: From Royal Capital to Living Heritage Site (Infographic)',
-                description: 'Once known as the “Thebes of the North,” Tanis was one of ancient Egypt’s most important royal capitals, home to temples, sacred lakes, royal tombs, and monumental statues.',
                 image: `${baseUrl}Tanis/ten_4_1.png`,
                 sections: [
                     {
@@ -652,7 +639,6 @@ export const cities = [
             {
                 id: 'tanis-ai-visualization',
                 title: 'Rediscovering Tanis: An AI Visualization of Egypt’s Lost Royal City',
-                description: 'Using AI-generated visuals, this video brings the ancient city of Tanis back to life, tracing the history of one of Egypt’s most important yet often overlooked royal capitals.',
                 image: `${baseUrl}Tanis/tan11-1536x1024.jpg`,
                 sections: [
                     {
@@ -681,7 +667,6 @@ export const cities = [
             {
                 id: 'qantir-living-above',
                 title: 'Living Above an Ancient Capital in Qantir',
-                description: 'In the quiet village of Qantir, daily life unfolds at an unhurried pace. Farmers cross green fields at sunrise, children make their way to school, and the rhythms of rural life continue as they have for generations.',
                 image: `${baseUrl}Qantir/qan_1_1.jpg`,
                 sections: [
                     {
@@ -755,7 +740,6 @@ export const cities = [
             {
                 id: 'qantir-then-and-now',
                 title: 'Qantir Then and Now: Traces of an Ancient Capital in a Living Landscape',
-                description: 'Once the heart of the grand city of Per-Ramesses, Qantir today stands as a quiet rural village where layers of ancient history lie beneath everyday life.',
                 image: `${baseUrl}Qantir/qan_2_1.jpg`,
                 sections: [
                     {
@@ -780,7 +764,6 @@ export const cities = [
             {
                 id: 'qantir-road-trip',
                 title: 'Road Trip to Sharqia: A Journey Through Egypt’s Hidden Ancient Capitals',
-                description: 'Leaving Cairo behind in the early morning hours, the road to Sharqia offers more than just a change of scenery—it opens a route into some of Egypt’s most overlooked archaeological treasures.',
                 image: `${baseUrl}Qantir/qan_3_1.jpg`,
                 sections: [
                     {
@@ -873,7 +856,6 @@ export const cities = [
             {
                 id: 'qantir-two-cities',
                 title: 'Two Cities, One Delta: Where Foreign Rule Gave Way to Empire',
-                description: 'Beneath the quiet agricultural fields of Egypt’s northeastern Delta lie the remains of two cities that reflect contrasting political eras—one shaped by foreign rulers who transformed Egypt’s military landscape, and another by powerful pharaohs who built an empire from the same ground.',
                 image: `${baseUrl}Qantir/qan_4_1.png`,
                 sections: [
                     {
@@ -946,7 +928,6 @@ export const cities = [
             {
                 id: 'qantir-secrets-beneath',
                 title: 'The Secrets Beneath Qantir: Uncovering Egypt’s Lost Capital',
-                description: 'Through AI-generated visuals, this video explores the hidden story of Qantir, the modern village built above the ancient city of Per-Ramesses.',
                 image: `${baseUrl}Qantir/WhatsApp Image 2026-05-14 at 3.29.34 PM.jpeg`,
                 sections: [
                     {
@@ -975,7 +956,6 @@ export const cities = [
             {
                 id: 'fayoum-24-hours',
                 title: '24 Hours in Fayoum: Exploring Egypt’s Natural Escape',
-                description: 'From the calm waters of Lake Qarun to the waterfalls of Wadi El Rayan and the quiet charm of Fayoum’s villages, this video follows a full day through one of Egypt’s most unique destinations.',
                 image: `${baseUrl}Fayoum/Medinet-Madi-fayoum.jpg`,
                 sections: [
                     {
@@ -991,7 +971,6 @@ export const cities = [
             {
                 id: 'fayoum-discover-infographic',
                 title: 'Discover Fayoum: Nature, Heritage, and Handicrafts (Infographic)',
-                description: 'Known for its unique blend of natural beauty and cultural heritage, Fayoum offers visitors a different side of Egypt beyond ancient temples and crowded cities.',
                 image: `${baseUrl}Fayoum/Medinet-Madi-fayoum.jpg`,
                 sections: [
                     {
@@ -1009,7 +988,6 @@ export const cities = [
             {
                 id: 'fayoum-qasr-qarun',
                 title: 'Qasr Qarun: The Hidden Temple of Fayoum',
-                description: 'If you drive through Fayoum, it’s very easy to miss Qasr Qarun without even realizing it’s there. From the outside, it doesn’t immediately stand out. It looks quiet, almost forgotten.',
                 image: `${baseUrl}Fayoum/fay_3_1.jpg`,
                 sections: [
                     {
@@ -1051,7 +1029,6 @@ export const cities = [
             {
                 id: 'amarna-revolution',
                 title: 'The King Who Changed Everything: The Rise and Fall of Akhenaten’s Amarna Revolution',
-                description: 'For more than three millennia, ancient Egypt thrived under a system that seemed eternal. The gods were many, the priests of Amun held immense power, and the Pharaoh stood as the divine bridge between heaven and earth. Then came Akhenaten...',
                 image: `${baseUrl}Tell El-Amarna/Copy of IMG_4048.PNG`,
                 sections: [
                     {
@@ -1119,7 +1096,6 @@ export const cities = [
             {
                 id: 'amarna-clay-tablets',
                 title: 'From Clay Tablets to Clicks: How Amarna’s Letters Shaped the Way We Communicate',
-                description: 'Long before email inboxes and instant messaging, the Pharaohs of Egypt were already experimenting with one of history’s earliest international mailing systems.',
                 image: `${baseUrl}Tell El-Amarna/Copy of IMG_4048.PNG`,
                 sections: [
                     {
@@ -1131,7 +1107,6 @@ export const cities = [
             {
                 id: 'amarna-silent-chambers',
                 title: 'Inside Amarna’s Silent Chambers: Tombs That Tell a Revolution’s Story',
-                description: 'Carved into the cliffs overlooking Akhetaten, the tombs of Amarna are more than burial sites — they are snapshots of a short‑lived experiment in faith and power.',
                 image: `${baseUrl}Tell El-Amarna/Copy of IMG_4048.PNG`,
                 sections: [
                     {
@@ -1143,7 +1118,6 @@ export const cities = [
             {
                 id: 'amarna-everyday-firsts',
                 title: 'Did You Know? Everyday Firsts Born in Amarna',
-                description: 'Beyond its radical temples and revolutionary art, Amarna was also a city of surprising “firsts.”',
                 image: `${baseUrl}Tell El-Amarna/Copy of IMG_4048.PNG`,
                 sections: [
                     {
@@ -1155,7 +1129,6 @@ export const cities = [
             {
                 id: 'amarna-travelers-guide',
                 title: 'Walking Through Amarna: A Traveler’s Guide to Egypt’s Forgotten Capital',
-                description: 'Tell el‑Amarna, once Pharaoh Akhenaten’s radical capital, is today a haunting archaeological site in Middle Egypt.',
                 image: `${baseUrl}Tell El-Amarna/Copy of IMG_4048.PNG`,
                 sections: [
                     {

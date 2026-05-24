@@ -74,27 +74,53 @@ const City = () => {
                 {city.topics && city.topics.length > 0 && (
                     <section className="mb-12 md:mb-16">
                         <h3 className="text-2xl font-display mb-6 border-b border-stone-200 pb-2">Featured Discoveries</h3>
-                        <div className="grid grid-cols-1 gap-6">
-                            {city.topics.map((topic) => (
+                        <div className="flex flex-col gap-4">
+                            {city.topics.map((topic, index) => (
                                 <Link
                                     key={topic.id}
                                     to={`/city/${city.id}/topic/${topic.id}`}
-                                    className="block group bg-stone-100 hover:bg-stone-200/50 p-6 rounded-2xl border border-stone-200 transition-all duration-300 shadow-sm hover:shadow-md"
+                                    className="block group relative rounded-2xl border border-stone-200 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-400 bg-white"
                                 >
-                                    <div className="flex flex-col gap-3">
-                                        <h4 className="text-xl font-display text-stone-900 group-hover:text-egypt-terra transition-colors leading-tight flex items-center gap-2">
-                                            {topic.title}
-                                            <span className="inline-block transition-transform group-hover:translate-x-1 duration-300 text-sm">→</span>
-                                        </h4>
-                                        <p className="text-stone-600 font-light leading-relaxed text-sm text-justify">
-                                            {topic.description}
-                                        </p>
+                                    <div className="flex items-stretch min-h-[120px]">
+                                        {/* Left: number badge + text */}
+                                        <div className="flex-1 flex items-center gap-4 px-5 py-5">
+                                            <span className="text-3xl md:text-4xl font-display text-stone-200 group-hover:text-egypt-terra/30 transition-colors duration-300 select-none leading-none flex-shrink-0 w-8 text-center">
+                                                {String(index + 1).padStart(2, '0')}
+                                            </span>
+                                            <div className="flex flex-col gap-1">
+                                                <h4 className="text-base md:text-lg font-display text-stone-800 group-hover:text-egypt-terra transition-colors duration-300 leading-snug">
+                                                    {topic.title}
+                                                </h4>
+                                                <span className="text-xs uppercase tracking-widest text-stone-400 group-hover:text-egypt-terra/60 transition-colors duration-300 flex items-center gap-1">
+                                                    Explore
+                                                    <span className="inline-block transition-transform group-hover:translate-x-1 duration-300">→</span>
+                                                </span>
+                                            </div>
+                                        </div>
+
+                                        {/* Right: image with gradient */}
+                                        {topic.image && (
+                                            <div className="w-32 md:w-44 flex-shrink-0 relative overflow-hidden">
+                                                <img
+                                                    src={topic.image}
+                                                    alt={topic.title}
+                                                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                                                    onError={(e) => { e.target.parentElement.style.display = 'none'; }}
+                                                />
+                                                {/* left-to-right fade into card */}
+                                                <div className="absolute inset-0 bg-gradient-to-r from-white/80 via-white/10 to-transparent pointer-events-none" />
+                                            </div>
+                                        )}
                                     </div>
+
+                                    {/* Bottom accent line on hover */}
+                                    <div className="absolute bottom-0 left-0 h-[2px] w-0 group-hover:w-full bg-egypt-terra transition-all duration-500 rounded-full" />
                                 </Link>
                             ))}
                         </div>
                     </section>
                 )}
+
 
                 {/* External Links */}
                 {city.externalLinks && city.externalLinks.length > 0 && (

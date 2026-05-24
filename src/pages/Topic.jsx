@@ -126,17 +126,18 @@ const Topic = () => {
             <Header />
 
             {/* Back button header bar */}
-            <div className="pt-28 pb-6 px-4 md:px-8 max-w-5xl mx-auto flex items-center justify-between border-b border-stone-200">
+            <div className="pt-28 pb-4 px-3 sm:px-6 md:px-8 max-w-5xl mx-auto flex items-center justify-between gap-3 border-b border-stone-200">
                 <Link 
                     to={`/city/${city.id}`}
-                    className="text-stone-600 hover:text-egypt-terra transition-colors flex items-center gap-2 group text-sm uppercase tracking-wider font-semibold"
+                    className="text-stone-600 hover:text-egypt-terra transition-colors flex items-center gap-1.5 group text-xs sm:text-sm uppercase tracking-wider font-semibold whitespace-nowrap"
                 >
                     <span className="group-hover:-translate-x-1 transition-transform">&larr;</span> Back to {city.nameEn}
                 </Link>
-                <span className="text-xs uppercase tracking-widest text-stone-400 bg-stone-200/50 px-2.5 py-1 rounded">
+                <span className="text-xs uppercase tracking-widest text-stone-400 bg-stone-200/50 px-2 py-1 rounded whitespace-nowrap">
                     Featured Discovery
                 </span>
             </div>
+
 
             <main className="max-w-4xl mx-auto px-4 md:px-6 py-12 md:py-16">
                 {/* Topic Header: Title */}
