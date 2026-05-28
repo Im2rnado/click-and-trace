@@ -100,12 +100,6 @@ export const cities = [
                     {
                         type: 'paragraph',
                         content: 'Once one of ancient Egypt’s most important religious centers, Heliopolis was known as the “City of the Sun” and served as a major center for the worship of Ra. Today, most of the ancient city lies hidden beneath the crowded streets of El-Matariya in Cairo. This infographic compares Heliopolis in the past and present, highlighting how a city once filled with temples and monuments gradually transformed into a modern urban district while preserving traces of its ancient legacy underground.'
-                    },
-                    {
-                        type: 'image',
-                        src: `${baseUrl}Heliopolis/UGLIANO_Fig.3.jpg`, // Standard infographic layout with beautiful dark card styling
-                        alt: 'Heliopolis Through Time Infographic',
-                        isInfographic: true
                     }
                 ]
             }
@@ -744,7 +738,7 @@ export const cities = [
                 sections: [
                     {
                         type: 'paragraph',
-                        content: 'Once the heart of the grand city of Per-Ramesses, Qantir today stands as a quiet rural village where layers of ancient history lie beneath everyday life. Agricultural fields, scattered housing, and modest infrastructure now define the landscape—but what is visible on the surface tells only part of the story. Beneath these ordinary scenes lie the buried remains of one of ancient Egypt’s most powerful capitals, still largely hidden from view.\n\nThese images reveal how Qantir has transformed over time—from a site where archaeological remains and ancient structures were once visible, to a landscape shaped by farming and modern development. Yet despite this visible change, the historical city continues to exist underground, preserving its presence beneath the village.'
+                        content: 'Once the heart of the grand city of Per-Ramesses, Qantir today stands as a quiet rural village where layers of ancient history lie beneath everyday life. Agricultural fields, scattered housing, and modest infrastructure now define the landscape—but what is visible on the surface tells only part of the story. Beneath these ordinary scenes lie the buried remains of one of ancient Egypt\'s most powerful capitals, still largely hidden from view.\n\nThese images reveal how Qantir has transformed over time—from a site where archaeological remains and ancient structures were once visible, to a landscape shaped by farming and modern development. Yet despite this visible change, the historical city continues to exist underground, preserving its presence beneath the village.'
                     },
                     {
                         type: 'heading',
@@ -755,9 +749,63 @@ export const cities = [
                         content: 'A quiet agricultural field in Qantir today was once part of the vast city of Per-Ramesses.\n\nThen: Archaeological remains and structural traces marked parts of the ancient city, reflecting its role as a major urban and industrial center.\n\nNow: Cultivated land and open fields dominate the same space, with little to no visible remains above ground.\n\nWhat appears as farmland today is only the surface—the real city still lies beneath.'
                     },
                     {
-                        type: 'image',
-                        src: `${baseUrl}Qantir/qan_2_1.jpg`,
-                        alt: 'Qantir agricultural landscape then and now'
+                        type: 'slideshow',
+                        images: [
+                            { src: `${baseUrl}Qantir/qan_2_1.jpg`, alt: 'Agricultural Landscape Then and Now 1' },
+                            { src: `${baseUrl}Qantir/qan_2_2.jpg`, alt: 'Agricultural Landscape Then and Now 2' },
+                            { src: `${baseUrl}Qantir/qan_2_3.jpg`, alt: 'Agricultural Landscape Then and Now 3' },
+                            { src: `${baseUrl}Qantir/qan_2_4.jpg`, alt: 'Agricultural Landscape Then and Now 4' },
+                            { src: `${baseUrl}Qantir/qan_2_5.jpg`, alt: 'Agricultural Landscape Then and Now 5' }
+                        ]
+                    },
+                    {
+                        type: 'heading',
+                        content: 'Residential Areas: Then and Now'
+                    },
+                    {
+                        type: 'paragraph',
+                        content: 'Qantir\'s built environment reflects gradual change over time.\n\nThen: The area formed part of a carefully planned royal capital, with palaces, administrative buildings, and organized urban spaces.\n\nNow: A mix of traditional low-rise homes and newer multi-story buildings defines the village, illustrating modern expansion over an ancient foundation.'
+                    },
+                    {
+                        type: 'slideshow',
+                        images: [
+                            { src: `${baseUrl}Qantir/qan_2_6.jpg`, alt: 'Residential Areas Then and Now 1' },
+                            { src: `${baseUrl}Qantir/qan_2_7.jpg`, alt: 'Residential Areas Then and Now 2' },
+                            { src: `${baseUrl}Qantir/qan_2_8.jpg`, alt: 'Residential Areas Then and Now 3' },
+                            { src: `${baseUrl}Qantir/qan_2_9.jpg`, alt: 'Residential Areas Then and Now 4' }
+                        ]
+                    },
+                    {
+                        type: 'heading',
+                        content: 'The Royal Stables: A Buried Landmark'
+                    },
+                    {
+                        type: 'paragraph',
+                        content: 'One of the most significant features of Per-Ramesses was its vast royal stables, which once supported Egypt\'s chariot army and military power.\n\nThen: The stables stood as a key part of the city\'s military infrastructure.\n\nNow: No visible traces remain above ground. The area has been transformed into agricultural land, and in some parts into cemeteries and sports fields.\n\nDespite this transformation, local residents confirm that the remains of the stables still exist—entirely buried beneath the surface.'
+                    },
+                    {
+                        type: 'slideshow',
+                        images: [
+                            { src: `${baseUrl}Qantir/qan_2_10.jpg`, alt: 'The Royal Stables Then and Now 1' },
+                            { src: `${baseUrl}Qantir/qan_2_11.jpg`, alt: 'The Royal Stables Then and Now 2' },
+                            { src: `${baseUrl}Qantir/qan_2_12.jpg`, alt: 'The Royal Stables Then and Now 3' },
+                            { src: `${baseUrl}Qantir/qan_2_13.jpg`, alt: 'The Royal Stables Then and Now 4' }
+                        ]
+                    },
+                    {
+                        type: 'heading',
+                        content: 'Qantir in the Past'
+                    },
+                    {
+                        type: 'paragraph',
+                        content: 'In the 13th century BCE, Qantir formed part of Per-Ramesses, one of ancient Egypt\'s most powerful capitals under Pharaoh Ramesses II. The city was a major political, military, and industrial center, featuring royal palaces, large-scale bronze workshops, and extensive horse stables that supported Egypt\'s chariot forces. Its strategic location in the Delta allowed direct access to eastern trade routes and military campaigns, making it a key hub of imperial power.'
+                    },
+                    {
+                        type: 'slideshow',
+                        images: [
+                            { src: `${baseUrl}Qantir/qan_2_14.jpg`, alt: 'Qantir in the Past 1' },
+                            { src: `${baseUrl}Qantir/qan_2_15.jpg`, alt: 'Qantir in the Past 2' }
+                        ]
                     }
                 ]
             },
@@ -976,12 +1024,6 @@ export const cities = [
                     {
                         type: 'paragraph',
                         content: 'Known for its unique blend of natural beauty and cultural heritage, Fayoum offers visitors a different side of Egypt beyond ancient temples and crowded cities. From the peaceful shores of Lake Qarun and the waterfalls of Wadi El Rayan to the region’s traditional handicrafts and local artistry, Fayoum combines scenic landscapes with a rich cultural identity. This infographic highlights some of the governorate’s most important attractions and experiences.'
-                    },
-                    {
-                        type: 'image',
-                        src: `${baseUrl}Fayoum/Medinet-Madi-fayoum.jpg`,
-                        alt: 'Discover Fayoum Infographic',
-                        isInfographic: true
                     }
                 ]
             },
@@ -1128,12 +1170,12 @@ export const cities = [
             },
             {
                 id: 'amarna-travelers-guide',
-                title: 'Walking Through Amarna: A Traveler’s Guide to Egypt’s Forgotten Capital',
+                title: 'Walking Through Amarna: A Traveler\'s Guide to Egypt\'s Forgotten Capital',
                 image: `${baseUrl}Tell El-Amarna/Copy of IMG_4048.PNG`,
                 sections: [
                     {
                         type: 'paragraph',
-                        content: 'Tell el‑Amarna, once Pharaoh Akhenaten’s radical capital, is today a haunting archaeological site in Middle Egypt. Visitors can explore tombs carved into cliffs, the remains of palaces and temples, and the desert altars dedicated to Aten. While the city itself is abandoned, the journey offers a rare chance to step into history, with practical tips from residents and tour guides helping modern travelers navigate this remote destination.'
+                        content: 'Tell el‑Amarna, once Pharaoh Akhenaten\'s radical capital, is today a haunting archaeological site in Middle Egypt. Visitors can explore tombs carved into cliffs, the remains of palaces and temples, and the desert altars dedicated to Aten. While the city itself is abandoned, the journey offers a rare chance to step into history, with practical tips from residents and tour guides helping modern travelers navigate this remote destination.'
                     }
                 ]
             }
@@ -1148,7 +1190,238 @@ export const cities = [
         lat: 26.5645,
         lng: 31.7458,
         videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
-        externalLinks: []
+        externalLinks: [],
+        topics: [
+            {
+                id: 'akhmim-living-looms',
+                title: 'Akhmim\'s Living Looms: A Weaving Tradition Passed Down Since Ancient Egypt',
+                image: `${baseUrl}Akhmim/akh_1_1.jpg`,
+                sections: [
+                    {
+                        type: 'paragraph',
+                        content: 'In parts of Akhmim, in Sohag Governorate, the sound of the handloom still echoes through narrow streets and weaving workshops. Unlike the noise of modern factories, the steady movement of the wooden shuttle carries a connection to a craft that has survived for thousands of years.\n\nKnown in ancient times as "Panopolis," Akhmim was once one of Egypt\'s most important textile centers. The city became famous for producing fine fabrics used by royalty and temples, earning a reputation that some historians compare to the industrial importance of Manchester during the modern era.'
+                    },
+                    { type: 'image', src: `${baseUrl}Akhmim/akh_1_1.jpg`, alt: 'Akhmim weaving tradition 1' },
+                    {
+                        type: 'paragraph',
+                        content: 'According to Salim Al-Omar, an Egyptologist and researcher specializing in ancient manufacturing techniques, Akhmim was far more than a local production center.\n\n"It is not an exaggeration to describe Akhmim as the Manchester of the ancient world," he says, explaining that the city\'s textiles were known for their exceptional quality and were often reserved for kings, priests, and religious ceremonies.'
+                    },
+                    { type: 'image', src: `${baseUrl}Akhmim/akh_1_2.jpg`, alt: 'Akhmim weaving tradition 2' },
+                    {
+                        type: 'heading',
+                        content: 'From Ancient Temples to Modern Workshops'
+                    },
+                    {
+                        type: 'paragraph',
+                        content: 'The tradition of weaving in Akhmim is deeply rooted in the city\'s identity. Ancient Egyptian temple carvings show scenes of skilled linen weavers using natural dyes and detailed techniques that were passed down through generations.\n\nEven today, weaving remains part of daily life for many families in Upper Egypt. In some homes and workshops, handlooms are still used to produce fabrics using traditional methods that have changed very little over time.'
+                    },
+                    { type: 'image', src: `${baseUrl}Akhmim/akh_1_3.jpg`, alt: 'Akhmim weaving tradition 3' },
+                    {
+                        type: 'paragraph',
+                        content: 'For Abdel Tawab, one of the oldest hand weavers in Akhmim\'s weaving district, the craft represents more than production.\n\n"When I move the shuttle, it feels like I am speaking to my grandfather," he says. "We are not only weaving cotton—we are weaving the spirit of Akhmim into every thread."'
+                    },
+                    { type: 'image', src: `${baseUrl}Akhmim/akh_1_4.jpg`, alt: 'Akhmim weaving tradition 4' },
+                    { type: 'image', src: `${baseUrl}Akhmim/akh_1_5.jpg`, alt: 'Akhmim weaving tradition 5' },
+                    {
+                        type: 'heading',
+                        content: 'Between Handcraft and Modern Industry'
+                    },
+                    {
+                        type: 'paragraph',
+                        content: 'While modern textile factories rely on machines to increase production speed, many craftsmen in Akhmim continue to prefer hand weaving, especially for silk and fine cotton fabrics.\n\nFor local weavers, handmade textiles carry something machines cannot reproduce: detail, individuality, and a human connection to the craft itself.'
+                    },
+                    { type: 'image', src: `${baseUrl}Akhmim/akh_1_6.jpg`, alt: 'Akhmim weaving tradition 6' },
+                    {
+                        type: 'paragraph',
+                        content: 'At the same time, technology is becoming increasingly present in preserving the city\'s weaving heritage. Digital documentation, online promotion, and modern production methods are helping introduce Akhmim\'s traditional crafts to wider audiences.\n\nEngineer Laila Gad, who works on documenting cultural heritage through technology, says modern tools should support artisans rather than replace them.\n\n"By digitally preserving these historical patterns, we can ensure that the craftsmanship of ancient Egypt continues to exist in today\'s world," she explains.'
+                    },
+                    { type: 'image', src: `${baseUrl}Akhmim/akh_1_7.jpg`, alt: 'Akhmim weaving tradition 7' },
+                    { type: 'image', src: `${baseUrl}Akhmim/akh_1_8.jpg`, alt: 'Akhmim weaving tradition 8' },
+                    {
+                        type: 'heading',
+                        content: 'A Tradition That Still Lives On'
+                    },
+                    {
+                        type: 'paragraph',
+                        content: 'Despite industrial changes and modern manufacturing, Akhmim remains strongly connected to its weaving identity. The city\'s workshops continue to produce handmade textiles, while the sound of the handloom still forms part of everyday life.'
+                    },
+                    { type: 'image', src: `${baseUrl}Akhmim/akh_1_9.jpg`, alt: 'Akhmim weaving tradition 9' },
+                    {
+                        type: 'paragraph',
+                        content: 'In Akhmim, weaving is not simply an old profession preserved for history—it is a living tradition that continues to connect the present with the craftsmanship of ancient Egypt.'
+                    },
+                    { type: 'image', src: `${baseUrl}Akhmim/akh_1_10.jpg`, alt: 'Akhmim weaving tradition 10' }
+                ]
+            },
+            {
+                id: 'akhmim-white-lady',
+                title: 'The White Lady of Akhmim: The Lost Queen Unearthed After 3,000 Years',
+                image: `${baseUrl}Akhmim/akh_2_1.jpg`,
+                sections: [
+                    {
+                        type: 'heading',
+                        content: 'Digging Up a 3,000-Year-Old Secret'
+                    },
+                    {
+                        type: 'paragraph',
+                        content: 'In 1981, construction workers building a post office in Akhmim made an unexpected discovery nearly four meters underground: a massive piece of white limestone. As excavation work continued, archaeologists uncovered the upper half of a colossal statue belonging to Queen Meritamen, daughter of Ramses II.\n\nThe statue, later known as the "White Lady of Akhmim," stood more than 12 meters tall and weighed around 31 tons. Its discovery quickly drew attention, becoming one of the most remarkable royal female statues uncovered in modern times.\n\nDr. Ahmed Mansour, a researcher in Upper Egypt antiquities, says the discovery restored part of the lost history of the 19th Dynasty. He notes that the statue\'s artistic detail reflects the high level of craftsmanship during the Ramesside period.'
+                    },
+                    {
+                        type: 'heading',
+                        content: 'The Daughter of Ramses II'
+                    },
+                    {
+                        type: 'paragraph',
+                        content: 'Meritamen was the fourth daughter of Ramses II and Queen Nefertari. Following the death of her mother and older sisters, she rose to become "Great Royal Wife," one of the highest positions a royal woman could hold in ancient Egypt.\n\nHer role extended beyond ceremonial duties. Historical records suggest she represented the royal family in Pi-Ramesses and played an important role within the royal court during the reign of her father.'
+                    },
+                    {
+                        type: 'heading',
+                        content: 'Religious and Political Influence'
+                    },
+                    {
+                        type: 'paragraph',
+                        content: 'Meritamen also held several important religious titles. Among them was "Sistrum Player of Hathor," a role connected to temple rituals and sacred ceremonies. She also supervised parts of Amun-Ra\'s temple administration.\n\nAccording to historical anthropologist Dr. Laila Fawzi, these positions gave Meritamen influence that went beyond palace life, linking her directly to religious authority in Akhmim and surrounding regions.'
+                    },
+                    {
+                        type: 'heading',
+                        content: 'A Masterpiece of Ramesside Art'
+                    },
+                    {
+                        type: 'paragraph',
+                        content: 'The statue itself reflects the artistic style of the 19th Dynasty. Carved from white limestone, it features detailed jewelry, a royal crown decorated with cobras and a sun disk, and a finely carved wig. Meritamen also wears a pleated linen dress typical of New Kingdom royal fashion.\n\nThe craftsmanship and scale of the statue continue to attract visitors and researchers alike, offering a rare look at royal female representation in ancient Egyptian art.'
+                    },
+                    {
+                        type: 'heading',
+                        content: 'The Temple and Akhmim\'s Living Memory'
+                    },
+                    {
+                        type: 'paragraph',
+                        content: 'Archaeologists believe the statue originally stood in the Great Temple of Min and Isis in Akhmim, a site once described by the Greek historian Herodotus as one of Egypt\'s most impressive temples.\n\nToday, many locals in Sohag still refer to Meritamen as "Al-Arousa" or "The Bride," reflecting how her image remains part of the city\'s cultural memory centuries after the temple\'s destruction.\n\nHai Mohamed, a resident of Akhmim, says people in the city have used the nickname for generations, viewing the statue as a lasting symbol of the area\'s history and identity.'
+                    },
+                    {
+                        type: 'heading',
+                        content: 'A Queen Remembered'
+                    },
+                    {
+                        type: 'paragraph',
+                        content: 'Today, the statue of Meritamen stands in the open-air museum of Akhmim, continuing to draw attention more than 3,000 years after it was created. Beyond its artistic value, the monument tells the story of a royal woman who held political, religious, and symbolic importance during one of ancient Egypt\'s most powerful dynasties.\n\nFor visitors, the "White Lady of Akhmim" is more than a statue—it is a reminder of how history can survive beneath the ground for centuries before returning once again to the light.'
+                    },
+                    {
+                        type: 'slideshow',
+                        images: Array.from({ length: 12 }, (_, i) => ({
+                            src: `${baseUrl}Akhmim/akh_2_${i + 1}.jpg`,
+                            alt: `The White Lady of Akhmim ${i + 1}`
+                        }))
+                    }
+                ]
+            },
+            {
+                id: 'akhmim-min-infographic',
+                title: 'Min of Akhmim: The Ancient God of Fertility and Power (Infographic)',
+                image: `${baseUrl}Akhmim/akh_3_1.jpg`,
+                sections: [
+                    {
+                        type: 'paragraph',
+                        content: 'Worshipped for thousands of years in ancient Akhmim, the god Min was considered one of Egypt\'s oldest and most important deities. Associated with fertility, harvest, strength, and prosperity, Min held a central place in religious life, particularly in Upper Egypt. This infographic explores the history, symbols, and significance of the god Min and his connection to the ancient city of Akhmim.'
+                    },
+                    {
+                        type: 'image',
+                        src: `${baseUrl}Akhmim/akh_3_1.jpg`,
+                        alt: 'Min of Akhmim Infographic 1',
+                        isInfographic: true
+                    },
+                    {
+                        type: 'image',
+                        src: `${baseUrl}Akhmim/akh_3_2.jpg`,
+                        alt: 'Min of Akhmim Infographic 2',
+                        isInfographic: true
+                    }
+                ]
+            },
+            {
+                id: 'akhmim-why-not-visited',
+                title: 'Why Don\'t People Visit Akhmim? The Forgotten City of Upper Egypt',
+                image: `${baseUrl}Akhmim/akh_4_1.jpg`,
+                sections: [
+                    { type: 'image', src: `${baseUrl}Akhmim/akh_4_1.jpg`, alt: 'Akhmim — the forgotten city of Upper Egypt' },
+                    {
+                        type: 'paragraph',
+                        content: 'Deep in Sohag Governorate, the massive statue of Queen Merit-Amun stands quietly in Akhmim, a city once known for its religious importance, weaving traditions, and monumental history. Despite being home to one of the tallest statues of a queen in ancient Egypt, Akhmim remains largely absent from Egypt\'s tourism spotlight.\n\nTo better understand why the city receives so little attention, an online survey was conducted among university students and young adults from Generation Z. The results revealed a major gap in awareness. Most participants had never heard of Akhmim as a tourist destination, while others associated travel in Upper Egypt only with Luxor and Aswan.\n\nMany respondents were surprised after seeing photos of Akhmim\'s archaeological sites, questioning why such places remain relatively unknown despite their historical value.'
+                    },
+                    {
+                        type: 'heading',
+                        content: 'Reasons Why Akhmim Remains Overlooked'
+                    },
+                    {
+                        type: 'paragraph',
+                        content: '● Limited public awareness\nMany people have never heard of Akhmim as a historical destination.\n\n● Focus on major tourist cities\nTourism promotion in Upper Egypt continues to focus mainly on Luxor and Aswan, leaving Sohag outside the usual tourism route.\n\n● Weak digital presence\nThere is a lack of modern visual content, short videos, and social media promotion introducing Akhmim to younger audiences.\n\n● Lack of tourism infrastructure\nThe city has limited hotels, tourism services, and visitor facilities near archaeological sites.\n\n● A different public image of Sohag\nSohag is often viewed as an agricultural or commercial governorate rather than a cultural tourism destination.\n\n● Archaeological sites surrounded by urban areas\nSome monuments are located within crowded neighborhoods, reducing the dramatic visual impact visitors often expect from historical sites.\n\n● Academic rather than engaging presentation\nInformation about Akhmim is usually presented in a highly academic way instead of using storytelling that attracts wider audiences.\n\n● Limited educational visits\nSchools and universities rarely organize trips to Akhmim, reducing direct exposure among younger generations.\n\n● Traditional crafts lack modern marketing\nAkhmim\'s famous textile industry is often promoted as a traditional heritage rather than as a contemporary cultural brand.\n\n● Few cultural events and festivals\nThe city lacks large-scale festivals or tourism events that could attract visitors and media attention.'
+                    },
+                    {
+                        type: 'heading',
+                        content: 'A City Waiting to Be Rediscovered'
+                    },
+                    {
+                        type: 'paragraph',
+                        content: 'Despite these challenges, reactions from people who discover Akhmim for the first time suggest strong potential for cultural tourism. Many respondents expressed curiosity after seeing photos and videos of the city\'s monuments and traditional crafts.\n\nMore than a forgotten archaeological site, Akhmim represents a living connection between ancient Egypt and modern Upper Egypt. Supporters of the city\'s heritage believe that stronger digital storytelling, visual content, and cultural promotion could help introduce Akhmim to a new generation of visitors—allowing the city, and the queen who watches over it, to finally regain the attention they deserve.'
+                    }
+                ]
+            },
+            {
+                id: 'akhmim-youssef-konoro',
+                title: 'Through the Lens of Youssef Konoro: Documenting the Soul of Akhmim',
+                image: `${baseUrl}Akhmim/Copy of IMG-20260425-WA0013.jpg`,
+                sections: [
+                    {
+                        type: 'paragraph',
+                        content: 'In Akhmim, where ancient monuments stand beside crowded streets and traditional weaving workshops, photographer and digital storyteller Youssef Konoro spends his days capturing the city through his camera lens. For him, Akhmim is not just an archaeological site in Upper Egypt—it is a living place filled with history, movement, and stories that deserve to be seen beyond Sohag.\n\nThrough his photographs and videos shared online, Youssef documents both the city\'s ancient heritage and its modern daily life, using digital platforms to introduce younger audiences to a side of Upper Egypt often overlooked.'
+                    },
+                    {
+                        type: 'heading',
+                        content: 'Starting the Day at the Archaeological Site'
+                    },
+                    {
+                        type: 'paragraph',
+                        content: 'Youssef\'s mornings usually begin early at the Akhmim Archaeological Site, where he photographs the massive statue of Princess Merit-Amun during sunrise.\n\n"To stand in front of the princess at sunrise is something special," he says. "When the first light touches the white limestone, it feels as if she is still watching over the city."\n\nFor Youssef, the statue represents more than a monument from the past. It reflects the historical identity of Akhmim and serves as one of the city\'s strongest visual symbols.'
+                    },
+                    {
+                        type: 'heading',
+                        content: 'Capturing the Streets of Akhmim'
+                    },
+                    {
+                        type: 'paragraph',
+                        content: 'As the city becomes busier throughout the day, Youssef moves into the streets, documenting markets, tuk-tuks, mosques, churches, and scenes from everyday life.\n\n"People often think Akhmim is only about ancient ruins," he explains. "But the city is alive. Its streets, people, and daily movement are part of its story too."\n\nHis photographs focus on details many visitors might overlook—from bread sellers and crowded alleyways to the architectural mix that reflects the city\'s long history.'
+                    },
+                    {
+                        type: 'heading',
+                        content: 'Inside the Weaving Workshops'
+                    },
+                    {
+                        type: 'paragraph',
+                        content: 'One of the places Youssef frequently documents is Akhmim\'s traditional weaving district, where handloom workshops continue a craft dating back to ancient Egypt.\n\nInside these workshops, craftsmen produce textiles using techniques passed down through generations, preserving one of the city\'s oldest industries.\n\n"When I photograph an elderly weaver working by hand, I feel like I\'m documenting a living part of our heritage," Youssef says. "It\'s not only fabric—it\'s history and identity."'
+                    },
+                    {
+                        type: 'heading',
+                        content: 'Sunset Along the Nile'
+                    },
+                    {
+                        type: 'paragraph',
+                        content: 'At the end of the day, Youssef often heads to the Sohag Corniche to photograph sunset scenes along the Nile. Families gather by the riverbank while boats move slowly across the water, creating a quieter atmosphere compared to the busy streets earlier in the day.\n\n"This is where I find peace," he says while filming the river at sunset.'
+                    },
+                    {
+                        type: 'heading',
+                        content: 'A Digital Storytelling Mission'
+                    },
+                    {
+                        type: 'paragraph',
+                        content: 'For Youssef Konoro, photography goes beyond content creation. Through platforms such as TikTok and Instagram, he sees his work as a way of promoting Akhmim\'s history, traditional crafts, and local culture to wider audiences.\n\nHis goal is to show that Akhmim is more than a forgotten city in Upper Egypt. Through his lens, it becomes a place where ancient history and modern life continue to exist side by side.'
+                    },
+                    {
+                        type: 'video_placeholder',
+                        placeholderText: 'waiting for you'
+                    }
+                ]
+            }
+        ]
     },
     {
         id: 'abydos',
@@ -1159,7 +1432,66 @@ export const cities = [
         lat: 26.1852,
         lng: 31.9195,
         videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
-        externalLinks: []
+        externalLinks: [],
+        topics: [
+            {
+                id: 'abydos-temple-of-seti',
+                title: 'Whispers of Eternity: Inside the Enchanted Temple of Seti at Abydos',
+                image: `${baseUrl}Abydos/Abydos-Temple-Trips-in-Egypt-2.jpg`,
+                sections: [
+                    {
+                        type: 'paragraph',
+                        content: 'One of the most enigmatic and enchanted locations in ancient Egypt is the first Temple of Seti, which is located in the center of the serene desert of Abydos, where silence is blended with the echo of history. It appears to be just another archaeological site from the outside, but once inside, you get the impression that you\'ve entered a different historical period.'
+                    },
+                    {
+                        type: 'video_placeholder',
+                        placeholderText: 'waiting for you'
+                    }
+                ]
+            },
+            {
+                id: 'abydos-pilgrimage-infographic',
+                title: '(Infographic) Pilgrimage to Abydos: Where Pharaohs Journeyed to Touch Eternity',
+                image: `${baseUrl}Abydos/aby_2_1.jpg`,
+                sections: [
+                    {
+                        type: 'paragraph',
+                        content: 'For the kings of ancient Egypt, Abydos was more than a sacred city, it was the spiritual gateway to Osiris, lord of the afterlife. Pharaohs traveled across the Nile and through desert routes to reach its temples, leaving offerings, commissioning monuments, and joining rituals that bound them to divine renewal. The journey itself was a statement of devotion: boats gliding upriver, processions winding through the sands, and ceremonies performed in the shadow of the great Temple of Seti I. This infographic traces how the pilgrimage unfolded, why Abydos mattered, how rulers traveled there, and what they did upon arrival, linking ancient ritual journeys to the timeless human quest for meaning.'
+                    },
+                    {
+                        type: 'video_placeholder',
+                        placeholderText: 'waiting for you'
+                    }
+                ]
+            },
+            {
+                id: 'abydos-local-voice',
+                title: 'Life Around History: A Local Voice from Abydos',
+                image: `${baseUrl}Abydos/aby_3_1.jpg`,
+                sections: [
+                    {
+                        type: 'paragraph',
+                        content: 'In the village of Oraba Abydos, the first Temple of Seti is not just an archaeological site, but part of the daily life of the inhabitants. The name of the place itself is associated with the temple, which created a clear overlap between the culture of the people and the Pharaonic civilization\n\nA resident of the area describes this association by saying:\n\n"Here we have grown up believing that the temple is part of our lives... All people know its details, its area, and even the forbidden places we enter."\n\nAlthough the archaeological site has become more organized in recent years, as walls and banners have been added recently, the people have been used to its existence for a long time, until it became a natural part of their day\n\nThe presence of tourists is also no longer strange to them, as shown:\n\n"We are used to them, and there is nothing new left... There are people here who sell Pharaonic things to them and live from this work, but they are not much"\n\nOver time, the temple has become for the people a familiar scene, while it remains a source of great fascination for visitors:\n\n"We see it as a normal thing, but tourists are impressed with everything... even people on the street"\n\nDespite the simplicity of life, tourism has brought some benefits, providing job opportunities for some, such as selling souvenirs or even converting homes into simple accommodation for visitors. Residents also feel proud when they know their place globally.\n\nHowever, life is not without challenges. Limited infrastructure is a real problem, especially with the entry of large tourist buses:\n\n"The road is narrow and not paved, and this makes traffic difficult to move... Also, tourists complain about this."\n\nBetween pride in the past and daily challenges, the people of Abydos live a unique experience, where history meets contemporary life in one scene that is not repeated.'
+                    }
+                ]
+            },
+            {
+                id: 'abydos-awaits',
+                title: 'Abydos Awaits: Walk in the Footsteps of Pharaohs',
+                image: `${baseUrl}Abydos/aby_5_1.png`,
+                sections: [
+                    {
+                        type: 'paragraph',
+                        content: 'Hidden in the sands of Upper Egypt, Abydos is where myth meets history, a sacred city that once drew kings seeking eternity. From the magnificent Temple of Seti I to the vibrant reliefs of Ramses II, every stone whispers stories of devotion to Osiris, god of the afterlife. Whether you\'re exploring ancient hieroglyphs, capturing timeless photos, or simply soaking in the spiritual calm, Abydos offers travelers a journey through Egypt\'s soul, one that begins just an hour from Sohag and ends in awe.'
+                    },
+                    {
+                        type: 'image',
+                        src: `${baseUrl}Abydos/aby_5_1.png`,
+                        alt: 'Walk in the Footsteps of Pharaohs'
+                    }
+                ]
+            }
+        ]
     },
     {
         id: 'thebes',
@@ -1170,6 +1502,23 @@ export const cities = [
         lat: 25.7205,
         lng: 32.6132,
         videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
-        externalLinks: []
+        externalLinks: [],
+        topics: [
+            {
+                id: 'thebes-karnak-legacy',
+                title: 'Walking Through Karnak: The Legacy of Ancient Thebes',
+                image: `${baseUrl}Thebes/medinet-habu.jpg`,
+                sections: [
+                    {
+                        type: 'paragraph',
+                        content: 'Rising on the east bank of Luxor, Karnak Temple stands as one of the largest and most impressive religious complexes ever built in ancient Egypt. Expanded over centuries by generations of pharaohs, the site reflects the political power, spiritual beliefs, and architectural achievements of ancient Thebes. This video offers a closer look at Karnak\'s towering columns, monumental statues, and sacred spaces that continue to tell the story of Egypt\'s ancient civilization.'
+                    },
+                    {
+                        type: 'video_placeholder',
+                        placeholderText: 'waiting for you'
+                    }
+                ]
+            }
+        ]
     }
 ];
