@@ -8,6 +8,9 @@ import Header from '../components/Header';
 const City = () => {
     const { id } = useParams();
     const city = cities.find(c => c.id === id);
+    const cityIndex = cities.findIndex(c => c.id === id);
+    const prevCity = cityIndex > 0 ? cities[cityIndex - 1] : null;
+    const nextCity = cityIndex < cities.length - 1 ? cities[cityIndex + 1] : null;
 
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -145,6 +148,64 @@ const City = () => {
                     </section>
                 )}
             </main>
+
+            {/* City Navigation */}
+            <nav className="max-w-4xl mx-auto px-4 md:px-6 pb-12 md:pb-16">
+                <div className="border-t border-stone-200 pt-10 flex items-stretch justify-between gap-2 md:gap-4">
+                    {/* Previous City */}
+                    <div className="flex-1 min-w-0">
+                        {prevCity && (
+                            <Link
+                                to={`/city/${prevCity.id}`}
+                                className="group flex flex-col h-full justify-center p-3 md:p-5 rounded-2xl border border-stone-200 hover:border-egypt-terra/40 hover:bg-egypt-terra/5 transition-all duration-300 shadow-sm hover:shadow-md"
+                            >
+                                <span className="text-[10px] md:text-xs uppercase tracking-widest text-stone-400 group-hover:text-egypt-terra/70 transition-colors duration-300 mb-1 md:mb-2 flex items-center gap-1">
+                                    <span className="inline-block group-hover:-translate-x-1 transition-transform duration-300">←</span>
+                                    Previous
+                                </span>
+                                <p className="text-sm md:text-2xl font-display text-stone-700 group-hover:text-egypt-terra transition-colors duration-300 leading-tight truncate">
+                                    {prevCity.nameEn}
+                                </p>
+                                {prevCity.descriptionShort && (
+                                    <p className="hidden md:block text-xs text-stone-400 mt-1 group-hover:text-stone-500 transition-colors duration-300 line-clamp-1">
+                                        {prevCity.descriptionShort}
+                                    </p>
+                                )}
+                            </Link>
+                        )}
+                    </div>
+
+                    {/* Divider dot */}
+                    {prevCity && nextCity && (
+                        <div className="flex items-center px-1 md:px-2">
+                            <div className="w-1 h-1 md:w-1.5 md:h-1.5 rounded-full bg-stone-300" />
+                        </div>
+                    )}
+
+                    {/* Next City */}
+                    <div className="flex-1 min-w-0">
+                        {nextCity && (
+                            <Link
+                                to={`/city/${nextCity.id}`}
+                                className="group flex flex-col h-full justify-center p-3 md:p-5 rounded-2xl border border-stone-200 hover:border-egypt-terra/40 hover:bg-egypt-terra/5 transition-all duration-300 shadow-sm hover:shadow-md text-right ml-auto w-full"
+                            >
+                                <span className="text-[10px] md:text-xs uppercase tracking-widest text-stone-400 group-hover:text-egypt-terra/70 transition-colors duration-300 mb-1 md:mb-2 flex items-center justify-end gap-1">
+                                    Next
+                                    <span className="inline-block group-hover:translate-x-1 transition-transform duration-300">→</span>
+                                </span>
+                                <p className="text-sm md:text-2xl font-display text-stone-700 group-hover:text-egypt-terra transition-colors duration-300 leading-tight truncate">
+                                    {nextCity.nameEn}
+                                </p>
+                                {nextCity.descriptionShort && (
+                                    <p className="hidden md:block text-xs text-stone-400 mt-1 group-hover:text-stone-500 transition-colors duration-300 line-clamp-1">
+                                        {nextCity.descriptionShort}
+                                    </p>
+                                )}
+                            </Link>
+                        )}
+                    </div>
+                </div>
+            </nav>
 
             <Footer />
         </div>
