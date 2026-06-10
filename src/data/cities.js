@@ -95,11 +95,17 @@ export const cities = [
             {
                 id: 'heliopolis-through-time',
                 title: 'From the City of the Sun to Modern Cairo: Heliopolis Through Time (Infographic)',
-                image: `${baseUrl}Heliopolis/UGLIANO_Fig.3.jpg`, // You can swap this image for the infographic file once uploaded
+                image: `${baseUrl}Heliopolis/hel_3_1.jpg`,
                 sections: [
                     {
                         type: 'paragraph',
                         content: 'Once one of ancient Egypt’s most important religious centers, Heliopolis was known as the “City of the Sun” and served as a major center for the worship of Ra. Today, most of the ancient city lies hidden beneath the crowded streets of El-Matariya in Cairo. This infographic compares Heliopolis in the past and present, highlighting how a city once filled with temples and monuments gradually transformed into a modern urban district while preserving traces of its ancient legacy underground.'
+                    },
+                    {
+                        type: 'image',
+                        src: `${baseUrl}Heliopolis/hel_3_1.jpg`,
+                        alt: 'Heliopolis Through Time Infographic',
+                        isInfographic: true
                     }
                 ]
             }
@@ -225,8 +231,8 @@ export const cities = [
                         content: 'In Mit Rahina, the site of ancient Memphis, the first capital of Egypt, history is not confined to museum halls or dusty textbooks. Here, families live in the shadow of colossal statues and weathered temples, their daily routines unfolding against a backdrop of millennia-old monuments. Children play near crumbling stone blocks, vendors set up stalls beside sacred ruins, and homes rise just steps away from the remnants of pharaonic grandeur. This coexistence of modern life and ancient legacy offers a rare glimpse into how heritage and humanity intertwine in one of the world’s most storied landscapes.'
                     },
                     {
-                        type: 'video_placeholder',
-                        placeholderText: 'waiting for you'
+                        type: 'video',
+                        url: 'https://youtube.com/shorts/_tET7aqX4UU?si=Rx2_6O98mg3P4uYJ'
                     }
                 ]
             },
@@ -517,6 +523,12 @@ export const cities = [
                         src: `${baseUrl}Tanis/ten_2_1.jpg`,
                         alt: 'Tanis Uncovered: Five Facts Infographic',
                         isInfographic: true
+                    },
+                    {
+                        type: 'image',
+                        src: `${baseUrl}Tanis/ten_2_2.jpg`,
+                        alt: 'Five Facts Infographic Detail',
+                        isInfographic: true
                     }
                 ]
             },
@@ -640,8 +652,8 @@ export const cities = [
                         content: 'Using AI-generated visuals, this video brings the ancient city of Tanis back to life, tracing the history of one of Egypt’s most important yet often overlooked royal capitals. Once a center of political and religious power in the northeastern Delta, Tanis was home to monumental temples, royal tombs, and massive statues. Through digitally recreated scenes and historical storytelling, the video offers a modern visual journey into the rise, decline, and rediscovery of the ancient city.'
                     },
                     {
-                        type: 'video_placeholder',
-                        placeholderText: 'waiting for you'
+                        type: 'video',
+                        url: 'https://youtube.com/shorts/w5q2bgUADok?si=ezOBO7t3XYLCby0Q'
                     }
                 ]
             }
@@ -983,8 +995,8 @@ export const cities = [
                         content: 'Through AI-generated visuals, this video explores the hidden story of Qantir, the modern village built above the ancient city of Per-Ramesses. From buried royal stables to forgotten monuments beneath the fields, the video reveals the secrets of a lost capital still hidden underground.'
                     },
                     {
-                        type: 'video_placeholder',
-                        placeholderText: 'waiting for you'
+                        type: 'video',
+                        url: 'https://youtu.be/EPp9cIZrZXM?si=Ym_BD3jUFwOvlage'
                     }
                 ]
             }
@@ -1011,8 +1023,8 @@ export const cities = [
                         content: 'From the calm waters of Lake Qarun to the waterfalls of Wadi El Rayan and the quiet charm of Fayoum’s villages, this video follows a full day through one of Egypt’s most unique destinations. Blending natural landscapes, historical sites, and local culture, the journey captures a side of Fayoum that feels both peaceful and deeply connected to everyday life.'
                     },
                     {
-                        type: 'video_placeholder',
-                        placeholderText: 'waiting for you'
+                        type: 'video',
+                        url: 'https://youtube.com/shorts/FexHluoFBZM?si=JVrrimJqTcO8rB3S'
                     }
                 ]
             },
@@ -1138,44 +1150,93 @@ export const cities = [
             {
                 id: 'amarna-clay-tablets',
                 title: 'From Clay Tablets to Clicks: How Amarna’s Letters Shaped the Way We Communicate',
-                image: `${baseUrl}Tell El-Amarna/Copy of IMG_4048.PNG`,
+                image: `${baseUrl}Tell El-Amarna/tell_2_1.png`,
                 sections: [
                     {
                         type: 'paragraph',
                         content: 'Long before email inboxes and instant messaging, the Pharaohs of Egypt were already experimenting with one of history’s earliest international mailing systems. In the desert city of Amarna, Akhenaten’s scribes etched diplomatic correspondence onto clay tablets, the famous Amarna Letters, and dispatched them across empires. These messages carried pleas for military aid, negotiations over alliances, and even personal appeals, revealing a world connected by words rather than armies. Today, as we swipe through WhatsApp chats or send a quick email, the echoes of Amarna remind us that the desire to communicate across distance is as old as civilization itself.'
+                    },
+                    {
+                        type: 'slideshow',
+                        images: [
+                            { src: `${baseUrl}Tell El-Amarna/tell_2_1.png`, alt: 'Amarna Clay Tablets 1' },
+                            { src: `${baseUrl}Tell El-Amarna/tell_2_2.png`, alt: 'Amarna Clay Tablets 2' },
+                            { src: `${baseUrl}Tell El-Amarna/tell_2_3.png`, alt: 'Amarna Clay Tablets 3' },
+                            { src: `${baseUrl}Tell El-Amarna/tell_2_4.png`, alt: 'Amarna Clay Tablets 4' },
+                            { src: `${baseUrl}Tell El-Amarna/tell_2_5.png`, alt: 'Amarna Clay Tablets 5' },
+                            { src: `${baseUrl}Tell El-Amarna/tell_2_6.png`, alt: 'Amarna Clay Tablets 6' }
+                        ]
                     }
                 ]
             },
             {
                 id: 'amarna-silent-chambers',
                 title: 'Inside Amarna’s Silent Chambers: Tombs That Tell a Revolution’s Story',
-                image: `${baseUrl}Tell El-Amarna/Copy of IMG_4048.PNG`,
+                image: `${baseUrl}Tell El-Amarna/tell_3_1.png`,
                 sections: [
                     {
                         type: 'paragraph',
                         content: 'Carved into the cliffs overlooking Akhetaten, the tombs of Amarna are more than burial sites — they are snapshots of a short‑lived experiment in faith and power. Here lie the nobles, officials, and courtiers who followed Akhenaten into his desert capital, their walls etched with scenes of devotion to Aten and glimpses of daily life in a city built on ideology. Unlike the grand temples of Thebes, Amarna’s tombs reflect a world in transition: austere yet intimate, revolutionary yet fragile. Each chamber reveals not only who was buried there, but how a radical king reshaped even the art of death.'
+                    },
+                    {
+                        type: 'slideshow',
+                        images: [
+                            { src: `${baseUrl}Tell El-Amarna/tell_3_1.png`, alt: 'Amarna Silent Chambers 1' },
+                            { src: `${baseUrl}Tell El-Amarna/tell_3_2.png`, alt: 'Amarna Silent Chambers 2' },
+                            { src: `${baseUrl}Tell El-Amarna/tell_3_3.png`, alt: 'Amarna Silent Chambers 3' },
+                            { src: `${baseUrl}Tell El-Amarna/tell_3_4.png`, alt: 'Amarna Silent Chambers 4' },
+                            { src: `${baseUrl}Tell El-Amarna/tell_3_5.png`, alt: 'Amarna Silent Chambers 5' },
+                            { src: `${baseUrl}Tell El-Amarna/tell_3_6.png`, alt: 'Amarna Silent Chambers 6' },
+                            { src: `${baseUrl}Tell El-Amarna/tell_3_7.png`, alt: 'Amarna Silent Chambers 7' },
+                            { src: `${baseUrl}Tell El-Amarna/tell_3_8.png`, alt: 'Amarna Silent Chambers 8' },
+                            { src: `${baseUrl}Tell El-Amarna/tell_3_9.png`, alt: 'Amarna Silent Chambers 9' }
+                        ]
                     }
                 ]
             },
             {
                 id: 'amarna-everyday-firsts',
                 title: 'Did You Know? Everyday Firsts Born in Amarna',
-                image: `${baseUrl}Tell El-Amarna/Copy of IMG_4048.PNG`,
+                image: `${baseUrl}Tell El-Amarna/tell_4_1.png`,
                 sections: [
                     {
                         type: 'paragraph',
                         content: 'Beyond its radical temples and revolutionary art, Amarna was also a city of surprising “firsts.” Archaeologists point to evidence of innovations that feel strikingly modern, from one of the earliest known bridges to what may have been the very first toilet seat. These details remind us that Akhenaten’s desert capital was not only a stage for ideological change but also a laboratory of daily life. Through text, photos, and AI‑generated visuals, this story explores how ordinary inventions in Amarna echo into the way we live today, proving that history’s greatest revolutions often begin with the simplest ideas.'
+                    },
+                    {
+                        type: 'slideshow',
+                        images: [
+                            { src: `${baseUrl}Tell El-Amarna/tell_4_1.png`, alt: 'Everyday Firsts in Amarna 1' },
+                            { src: `${baseUrl}Tell El-Amarna/tell_4_2.png`, alt: 'Everyday Firsts in Amarna 2' },
+                            { src: `${baseUrl}Tell El-Amarna/tell_4_3.png`, alt: 'Everyday Firsts in Amarna 3' },
+                            { src: `${baseUrl}Tell El-Amarna/tell_4_4.png`, alt: 'Everyday Firsts in Amarna 4' },
+                            { src: `${baseUrl}Tell El-Amarna/tell_4_5.png`, alt: 'Everyday Firsts in Amarna 5' },
+                            { src: `${baseUrl}Tell El-Amarna/tell_4_6.png`, alt: 'Everyday Firsts in Amarna 6' },
+                            { src: `${baseUrl}Tell El-Amarna/tell_4_7.png`, alt: 'Everyday Firsts in Amarna 7' }
+                        ]
                     }
                 ]
             },
             {
                 id: 'amarna-travelers-guide',
                 title: 'Walking Through Amarna: A Traveler\'s Guide to Egypt\'s Forgotten Capital',
-                image: `${baseUrl}Tell El-Amarna/Copy of IMG_4048.PNG`,
+                image: `${baseUrl}Tell El-Amarna/tell_5_1.png`,
                 sections: [
                     {
                         type: 'paragraph',
                         content: 'Tell el‑Amarna, once Pharaoh Akhenaten\'s radical capital, is today a haunting archaeological site in Middle Egypt. Visitors can explore tombs carved into cliffs, the remains of palaces and temples, and the desert altars dedicated to Aten. While the city itself is abandoned, the journey offers a rare chance to step into history, with practical tips from residents and tour guides helping modern travelers navigate this remote destination.'
+                    },
+                    {
+                        type: 'slideshow',
+                        images: [
+                            { src: `${baseUrl}Tell El-Amarna/tell_5_1.png`, alt: 'Amarna Traveler Guide 1' },
+                            { src: `${baseUrl}Tell El-Amarna/tell_5_2.png`, alt: 'Amarna Traveler Guide 2' },
+                            { src: `${baseUrl}Tell El-Amarna/tell_5_3.png`, alt: 'Amarna Traveler Guide 3' },
+                            { src: `${baseUrl}Tell El-Amarna/tell_5_4.png`, alt: 'Amarna Traveler Guide 4' },
+                            { src: `${baseUrl}Tell El-Amarna/tell_5_5.png`, alt: 'Amarna Traveler Guide 5' },
+                            { src: `${baseUrl}Tell El-Amarna/tell_5_6.png`, alt: 'Amarna Traveler Guide 6' },
+                            { src: `${baseUrl}Tell El-Amarna/tell_5_7.png`, alt: 'Amarna Traveler Guide 7' }
+                        ]
                     }
                 ]
             }
@@ -1452,11 +1513,17 @@ export const cities = [
             {
                 id: 'abydos-pilgrimage-infographic',
                 title: '(Infographic) Pilgrimage to Abydos: Where Pharaohs Journeyed to Touch Eternity',
-                image: `${baseUrl}Abydos/aby_2_1.jpg`,
+                image: `${baseUrl}Abydos/ab_2_1.jpg`,
                 sections: [
                     {
                         type: 'paragraph',
                         content: 'For the kings of ancient Egypt, Abydos was more than a sacred city, it was the spiritual gateway to Osiris, lord of the afterlife. Pharaohs traveled across the Nile and through desert routes to reach its temples, leaving offerings, commissioning monuments, and joining rituals that bound them to divine renewal. The journey itself was a statement of devotion: boats gliding upriver, processions winding through the sands, and ceremonies performed in the shadow of the great Temple of Seti I. This infographic traces how the pilgrimage unfolded, why Abydos mattered, how rulers traveled there, and what they did upon arrival, linking ancient ritual journeys to the timeless human quest for meaning.'
+                    },
+                    {
+                        type: 'image',
+                        src: `${baseUrl}Abydos/ab_2_1.jpg`,
+                        alt: 'Pilgrimage to Abydos Infographic',
+                        isInfographic: true
                     },
                     {
                         type: 'video_placeholder',

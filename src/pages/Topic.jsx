@@ -192,6 +192,31 @@ const SlideshowSection = ({ images }) => {
     );
 };
 
+const getEmbedUrl = (url) => {
+    if (!url) return null;
+    let videoId = '';
+    const shortsMatch = url.match(/youtube\.com\/shorts\/([a-zA-Z0-9_-]+)/);
+    if (shortsMatch) {
+        videoId = shortsMatch[1];
+    } else {
+        const watchMatch = url.match(/v=([a-zA-Z0-9_-]+)/);
+        if (watchMatch) {
+            videoId = watchMatch[1];
+        } else {
+            const shortMatch = url.match(/youtu\.be\/([a-zA-Z0-9_-]+)/);
+            if (shortMatch) {
+                videoId = shortMatch[1];
+            } else {
+                const embedMatch = url.match(/embed\/([a-zA-Z0-9_-]+)/);
+                if (embedMatch) {
+                    videoId = embedMatch[1];
+                }
+            }
+        }
+    }
+    return videoId ? `https://www.youtube.com/embed/${videoId}` : null;
+};
+
 const Topic = () => {
     const { cityId, topicId } = useParams();
     const city = cities.find(c => c.id === cityId);
@@ -353,6 +378,27 @@ const Topic = () => {
                                                     {section.placeholderText || 'waiting for you'}
                                                 </span>
                                             </div>
+                                        </div>
+                                    );
+                                case 'video':
+                                    const embedUrl = getEmbedUrl(section.url);
+                                    if (!embedUrl) return null;
+                                    const isShort = section.url.includes('/shorts/');
+                                    return (
+                                        <div 
+                                            key={idx}
+                                            className={`my-8 rounded-2xl overflow-hidden border border-stone-200 shadow-xl mx-auto bg-stone-900 w-full ${
+                                                isShort ? 'aspect-[9/16] md:aspect-video' : 'aspect-video'
+                                            }`}
+                                        >
+                                            <iframe
+                                                src={embedUrl}
+                                                title={section.alt || "Video player"}
+                                                frameBorder="0"
+                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                                allowFullScreen
+                                                className="w-full h-full"
+                                            />
                                         </div>
                                     );
                                 case 'slideshow':

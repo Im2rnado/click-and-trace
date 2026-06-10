@@ -5,7 +5,7 @@ const Hero = () => {
     return (
         <section className="relative h-screen flex flex-col items-center justify-center text-center bg-stone-900 text-white overflow-hidden">
             {/* Background Image */}
-            <div className="absolute inset-0 z-0">
+            <div className="absolute inset-0 z-0 opacity-40">
                 <img
                     src={`${import.meta.env.BASE_URL}landing.jpg`}
                     alt="Ancient Egypt Background"
