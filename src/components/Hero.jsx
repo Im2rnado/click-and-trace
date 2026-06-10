@@ -10,6 +10,7 @@ const Hero = () => {
                     src={`${import.meta.env.BASE_URL}landing.jpg`}
                     alt="Ancient Egypt Background"
                     className="w-full h-full object-cover"
+                    style={{ objectPosition: 'center 25%' }}
                 />
             </div>
 
