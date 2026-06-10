@@ -4,10 +4,10 @@ import { motion } from 'framer-motion';
 const Hero = () => {
     return (
         <section className="relative h-screen flex flex-col items-center justify-center text-center bg-stone-900 text-white overflow-hidden">
-            {/* Background Image Placeholder */}
-            <div className="absolute inset-0 z-0 opacity-40">
+            {/* Background Image */}
+            <div className="absolute inset-0 z-0">
                 <img
-                    src="https://images.unsplash.com/photo-1503177119275-0aa32b3a9368?q=80&w=2070&auto=format&fit=crop"
+                    src={`${import.meta.env.BASE_URL}landing.jpg`}
                     alt="Ancient Egypt Background"
                     className="w-full h-full object-cover"
                 />
