@@ -361,25 +361,7 @@ const Topic = () => {
                                         </div>
                                     );
                                 case 'video_placeholder':
-                                    return (
-                                        <div 
-                                            key={idx}
-                                            className="my-8 aspect-video rounded-2xl overflow-hidden bg-stone-900 border border-stone-850 shadow-2xl flex flex-col items-center justify-center relative group max-w-3xl mx-auto"
-                                        >
-                                            {/* cinematic dark overlay */}
-                                            <div className="absolute inset-0 bg-gradient-to-t from-stone-950 to-stone-900/40 opacity-70 group-hover:opacity-65 transition-opacity duration-500" />
-                                            
-                                            {/* Pulsing play button */}
-                                            <div className="relative z-10 flex flex-col items-center gap-4 text-center p-6">
-                                                <div className="w-16 h-16 rounded-full bg-egypt-terra/20 border border-egypt-terra/40 flex items-center justify-center text-egypt-terra animate-pulse group-hover:scale-110 group-hover:bg-egypt-terra group-hover:text-white transition-all duration-500 shadow-lg cursor-pointer">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" className="w-6 h-6 ml-0.5"><path d="M8 5v14l11-7z"/></svg>
-                                                </div>
-                                                <span className="text-stone-300 font-display italic tracking-widest text-xs uppercase group-hover:text-white transition-colors duration-300">
-                                                    {section.placeholderText || 'waiting for you'}
-                                                </span>
-                                            </div>
-                                        </div>
-                                    );
+                                    return null;
                                 case 'video':
                                     const embedUrl = getEmbedUrl(section.url);
                                     if (!embedUrl) return null;

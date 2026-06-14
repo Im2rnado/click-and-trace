@@ -606,10 +606,6 @@ export const cities = [
                         type: 'image',
                         src: `${baseUrl}Tanis/ten_3_6.jpg`,
                         alt: 'Steadfast column standing tall in the fields of Sharqia'
-                    },
-                    {
-                        type: 'video_placeholder',
-                        placeholderText: 'waiting for you'
                     }
                 ]
             },
@@ -627,18 +623,6 @@ export const cities = [
                         src: `${baseUrl}Tanis/ten_4_1.png`,
                         alt: 'Tanis Through Time Infographic',
                         isInfographic: true
-                    },
-                    {
-                        type: 'heading',
-                        content: 'Video: A Glimpse of Tanis'
-                    },
-                    {
-                        type: 'paragraph',
-                        content: 'A short glimpse into the monuments and ruins of ancient Tanis.'
-                    },
-                    {
-                        type: 'video_placeholder',
-                        placeholderText: 'waiting for you'
                     }
                 ]
             },
@@ -1475,10 +1459,6 @@ export const cities = [
                     {
                         type: 'paragraph',
                         content: 'For Youssef Konoro, photography goes beyond content creation. Through platforms such as TikTok and Instagram, he sees his work as a way of promoting Akhmim\'s history, traditional crafts, and local culture to wider audiences.\n\nHis goal is to show that Akhmim is more than a forgotten city in Upper Egypt. Through his lens, it becomes a place where ancient history and modern life continue to exist side by side.'
-                    },
-                    {
-                        type: 'video_placeholder',
-                        placeholderText: 'waiting for you'
                     }
                 ]
             }
@@ -1503,10 +1483,6 @@ export const cities = [
                     {
                         type: 'paragraph',
                         content: 'One of the most enigmatic and enchanted locations in ancient Egypt is the first Temple of Seti, which is located in the center of the serene desert of Abydos, where silence is blended with the echo of history. It appears to be just another archaeological site from the outside, but once inside, you get the impression that you\'ve entered a different historical period.'
-                    },
-                    {
-                        type: 'video_placeholder',
-                        placeholderText: 'waiting for you'
                     }
                 ]
             },
@@ -1524,10 +1500,6 @@ export const cities = [
                         src: `${baseUrl}Abydos/ab_2_1.jpg`,
                         alt: 'Pilgrimage to Abydos Infographic',
                         isInfographic: true
-                    },
-                    {
-                        type: 'video_placeholder',
-                        placeholderText: 'waiting for you'
                     }
                 ]
             },
@@ -1578,11 +1550,7 @@ export const cities = [
                 sections: [
                     {
                         type: 'paragraph',
-                        content: 'Rising on the east bank of Luxor, Karnak Temple stands as one of the largest and most impressive religious complexes ever built in ancient Egypt. Expanded over centuries by generations of pharaohs, the site reflects the political power, spiritual beliefs, and architectural achievements of ancient Thebes. This video offers a closer look at Karnak\'s towering columns, monumental statues, and sacred spaces that continue to tell the story of Egypt\'s ancient civilization.'
-                    },
-                    {
-                        type: 'video_placeholder',
-                        placeholderText: 'waiting for you'
+                        content: 'Rising on the east bank of Luxor, Karnak Temple stands as one of the largest and most impressive religious complexes ever built in ancient Egypt. Expanded over centuries by generations of pharaohs, the site reflects the political power, spiritual beliefs, and architectural achievements of ancient Thebes. The complex showcases Karnak\'s towering columns, monumental statues, and sacred spaces that continue to tell the story of Egypt\'s ancient civilization.'
                     }
                 ]
             }

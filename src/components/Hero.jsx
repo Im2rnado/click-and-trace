@@ -48,6 +48,34 @@ const Hero = () => {
                 >
                     Tracing the forgotten cities of Ancient Egypt
                 </motion.p>
+
+                {/* Documentary Video Button */}
+                <motion.div
+                    initial={{ opacity: 0, y: 30 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 1, delay: 0.7, ease: "easeOut" }}
+                    className="mt-8 flex justify-center"
+                >
+                    <a
+                        href="https://youtu.be/6FhjqH4mdkI?si=PHZ9Bx6hDsIekiw_"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-3 px-8 py-3.5 bg-egypt-terra text-white font-sans uppercase tracking-widest text-xs md:text-sm font-semibold rounded-full shadow-lg hover:bg-stone-100 hover:text-stone-900 hover:scale-105 active:scale-95 transition-all duration-300 group"
+                        style={{
+                            boxShadow: '0 4px 20px rgba(145, 74, 56, 0.4)'
+                        }}
+                    >
+                        <svg 
+                            xmlns="http://www.w3.org/2000/svg" 
+                            fill="currentColor" 
+                            viewBox="0 0 24 24" 
+                            className="w-4 h-4 md:w-5 md:h-5 transition-transform group-hover:scale-110"
+                        >
+                            <path d="M8 5v14l11-7z"/>
+                        </svg>
+                        Documentary
+                    </a>
+                </motion.div>
             </div>
 
             <motion.div
